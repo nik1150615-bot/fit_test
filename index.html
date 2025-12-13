@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>METTA • Тест посадки</title>
+  <title>Тест посадки METTA Samurai</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     * { box-sizing: border-box; }
@@ -10,43 +10,37 @@
     body {
       margin: 0;
       padding: 0;
-      min-height: 100vh;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: radial-gradient(circle at top, #e5e7eb 0, #f3f4f6 45%, #e5e7eb 100%);
-      color: #020617;
+      background: radial-gradient(circle at top, #e5e7eb 0, #f9fafb 40%, #e5e7eb 100%);
+      color: #111827;
       display: flex;
       justify-content: center;
+      min-height: 100vh;
     }
 
     .shell {
       width: 100%;
-      max-width: 480px;
-      padding: 12px 10px;
+      max-width: 520px;
+      padding: 12px 10px 24px;
     }
 
     .card {
       width: 100%;
-      height: calc(100vh - 24px);
-      max-height: 780px;
-      background: #f9fafb;
-      border-radius: 22px;
-      padding: 18px 16px 12px;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 18px 18px 16px;
       box-shadow:
         0 18px 40px rgba(148,163,184,0.65),
-        0 0 0 1px rgba(148, 163, 184, 0.6);
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      overflow: hidden;
+        0 0 0 1px rgba(209,213,219,0.9);
+      border: 1px solid rgba(209, 213, 219, 0.9);
     }
 
     .header {
       display: flex;
       justify-content: space-between;
-      gap: 12px;
+      gap: 10px;
+      align-items: flex-start;
       margin-bottom: 8px;
-      align-items: center;
     }
 
     .badge {
@@ -59,42 +53,45 @@
       background: rgba(59,130,246,0.08);
       color: #1d4ed8;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.08em;
       font-weight: 600;
+      margin-bottom: 6px;
     }
 
     .badge-dot {
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
       border-radius: 999px;
       background: #22c55e;
-      box-shadow: 0 0 0 4px rgba(34,197,94,0.2);
+      box-shadow: 0 0 0 4px rgba(34,197,94,0.25);
     }
 
     h1 {
-      margin: 4px 0 2px;
       font-size: 20px;
-      color: #020617;
+      margin: 0 0 4px;
+      color: #030712;
     }
 
     .subtitle {
       font-size: 13px;
       color: #4b5563;
-      max-width: 260px;
+      max-width: 280px;
+      line-height: 1.4;
     }
 
-    .logo {
+    .logo-block {
+      text-align: right;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      gap: 2px;
-      text-align: right;
+      gap: 3px;
+      min-width: 110px;
     }
 
-    .logo-brand {
-      font-size: 18px;
+    .logo-main {
+      font-size: 22px;
       font-weight: 800;
-      letter-spacing: 0.24em;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
       color: #020617;
     }
@@ -102,51 +99,60 @@
     .logo-sub {
       font-size: 9px;
       color: #6b7280;
-      letter-spacing: 0.12em;
       text-transform: uppercase;
+      letter-spacing: 0.14em;
     }
 
-    .main-body {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-
-    .screen {
-      flex: 1;
-      display: none;
-      flex-direction: column;
-      overflow: hidden;
-    }
-
-    .screen.active {
-      display: flex;
-    }
-
-    .intro-text {
-      font-size: 14px;
-      color: #4b5563;
-      line-height: 1.5;
+    .info-btn {
       margin-top: 6px;
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      background: #f9fafb;
+      color: #4b5563;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
     }
 
-    .intro-text strong {
-      color: #111827;
-    }
-
-    .centered {
-      display: flex;
-      flex-direction: column;
+    .info-btn span.icon {
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      flex: 1;
-      text-align: center;
-      padding: 12px 4px 8px;
+      font-size: 11px;
+      background: #ffffff;
     }
 
-    .main-btn {
-      padding: 11px 20px;
+    .section {
+      margin-top: 10px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .intro {
+      font-size: 14px;
+      color: #374151;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
+    .intro ul {
+      padding-left: 18px;
+      margin: 6px 0 0;
+      font-size: 13px;
+      color: #4b5563;
+    }
+
+    .primary-btn {
+      padding: 9px 16px;
       border-radius: 999px;
       border: none;
       background: #3b82f6;
@@ -162,456 +168,71 @@
       gap: 6px;
     }
 
+    .primary-btn:disabled {
+      opacity: 0.4;
+      box-shadow: none;
+      cursor: default;
+    }
+
     .secondary-btn {
       padding: 8px 14px;
       border-radius: 999px;
       border: 1px solid #d1d5db;
-      background: #ffffff;
+      background: #f9fafb;
       color: #111827;
       font-size: 13px;
       cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
     }
 
-    .bottom-row {
-      margin-top: 8px;
+    .secondary-btn:disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
+
+    .progress-row {
       display: flex;
       justify-content: space-between;
-      gap: 8px;
       align-items: center;
-    }
-
-    /* Прогресс */
-
-    .progress-wrap {
-      margin: 4px 0 8px;
-    }
-
-    .progress-label {
-      font-size: 11px;
+      font-size: 12px;
       color: #6b7280;
-      margin-bottom: 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
+      margin-bottom: 6px;
     }
 
     .progress-bar {
       width: 100%;
-      height: 6px;
+      height: 4px;
       border-radius: 999px;
       background: #e5e7eb;
       overflow: hidden;
+      margin-top: 4px;
     }
 
     .progress-fill {
       height: 100%;
-      width: 0;
+      width: 0%;
       border-radius: 999px;
-      background: linear-gradient(90deg, #3b82f6, #22c55e);
-      transition: width 0.3s ease-out;
+      background: linear-gradient(to right, #3b82f6, #22c55e);
+      transition: width 0.25s ease-out;
     }
 
-    /* Вопросы */
-
-    .question-block {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-
-    .question-meta {
-      font-size: 12px;
-      color: #6b7280;
-      margin-bottom: 4px;
-    }
-
-    .question-title {
-      font-size: 16px;
-      font-weight: 600;
-      color: #111827;
-      margin-bottom: 10px;
-    }
-
-    .answers-list {
-      flex: 1;
-      overflow-y: auto;
-      padding-right: 2px;
-      padding-bottom: 4px;
-    }
-
-    .answer-btn {
-      width: 100%;
-      text-align: left;
-      padding: 9px 10px;
-      margin-bottom: 6px;
-      border-radius: 14px;
-      border: 1px solid #d1d5db;
-      background: #ffffff;
-      font-size: 14px;
-      color: #111827;
-      cursor: pointer;
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      transition:
-        background 0.2s ease-out,
-        border-color 0.2s ease-out,
-        transform 0.08s ease-out,
-        box-shadow 0.2s ease-out;
-    }
-
-    .answer-bullet {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      margin-top: 6px;
-      background: #d1d5db;
-      flex-shrink: 0;
-    }
-
-    .answer-text {
-      flex: 1;
-    }
-
-    .answer-btn:hover {
-      border-color: #3b82f6;
-      box-shadow: 0 0 0 1px rgba(59,130,246,0.4);
-    }
-
-    .answer-btn.selected {
-      background: #eff6ff;
-      border-color: #2563eb;
-      box-shadow:
-        0 0 0 1px rgba(37,99,235,0.7),
-        0 6px 14px rgba(59,130,246,0.35);
-      transform: translateY(-1px);
-    }
-
-    .answer-btn.selected .answer-bullet {
-      background: #3b82f6;
-    }
-
-    .question-footer {
-      margin-top: 6px;
-      display: flex;
-      justify-content: space-between;
-      gap: 8px;
-      align-items: center;
-    }
-
-    .question-hint {
-      font-size: 11px;
-      color: #6b7280;
-    }
-
-    /* Результат */
-
-    .result-body {
-      flex: 1;
-      overflow-y: auto;
-      padding-right: 2px;
-      padding-bottom: 4px;
-    }
-
-    .result-title {
-      font-size: 17px;
-      font-weight: 600;
-      margin-bottom: 8px;
-      color: #111827;
-    }
-
-    .result-intro {
-      font-size: 14px;
-      color: #4b5563;
-      margin-bottom: 10px;
-      line-height: 1.5;
-    }
-
-    .zone-block {
-      margin-bottom: 10px;
-      padding: 8px 10px;
-      border-radius: 14px;
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-    }
-
-    .zone-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 6px;
-      margin-bottom: 4px;
-    }
-
-    .zone-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: #111827;
-    }
-
-    .risk-pill {
-      padding: 3px 8px;
-      border-radius: 999px;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.09em;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .risk-low {
-      background: #dcfce7;
-      color: #166534;
-      border: 1px solid #16a34a;
-    }
-
-    .risk-mid {
-      background: #fef3c7;
-      color: #92400e;
-      border: 1px solid #f59e0b;
-    }
-
-    .risk-high {
-      background: #fee2e2;
-      color: #991b1b;
-      border: 1px solid #ef4444;
-    }
-
-    .zone-text {
-      font-size: 13px;
-      color: #4b5563;
-      line-height: 1.45;
-    }
-
-    .zone-text strong {
-      color: #111827;
-    }
-
-    .result-warning {
-      margin-top: 4px;
-      font-size: 13px;
-      color: #b91c1c;
-    }
-
-    /* Блок кресел */
-
-    .chairs-section {
-      margin-top: 12px;
-      padding-top: 8px;
-      border-top: 1px solid #e5e7eb;
-      display: none;
-    }
-
-    .chairs-title {
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 6px;
-      color: #111827;
-    }
-
-    .chairs-sub {
-      font-size: 13px;
-      color: #4b5563;
-      margin-bottom: 8px;
-    }
-
-    .carousel {
-      position: relative;
-      border-radius: 16px;
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      padding: 10px 10px 10px;
-      overflow: hidden;
-    }
-
-    .carousel-track {
-      display: flex;
-      transition: transform 0.3s ease-out;
-    }
-
-    .chair-card {
-      min-width: 100%;
-      padding-right: 4px;
-    }
-
-    .chair-photo {
-      width: 100%;
-      height: 140px;
-      border-radius: 14px;
-      background: radial-gradient(circle at 20% 0, #dbeafe 0, #bfdbfe 40%, #93c5fd 100%);
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-start;
-      padding: 10px 12px;
-      color: #111827;
-      font-weight: 600;
-      font-size: 14px;
-    }
-
-    .chair-tag {
-      font-size: 11px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #1d4ed8;
-      margin-bottom: 2px;
-    }
-
-    .chair-name {
-      font-size: 14px;
-      font-weight: 600;
-      color: #111827;
-      margin-bottom: 3px;
-    }
-
-    .chair-desc {
-      font-size: 13px;
-      color: #4b5563;
-      line-height: 1.4;
-      margin-bottom: 4px;
-    }
-
-    .carousel-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 6px;
-      gap: 8px;
-    }
-
-    .carousel-btn {
-      width: 26px;
-      height: 26px;
-      border-radius: 999px;
-      border: 1px solid #d1d5db;
-      background: #ffffff;
-      cursor: pointer;
-      font-size: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #111827;
-    }
-
-    .carousel-dots {
-      display: flex;
-      gap: 4px;
-      justify-content: center;
-      flex: 1;
-    }
-
-    .carousel-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: #e5e7eb;
-    }
-
-    .carousel-dot.active {
-      background: #3b82f6;
-    }
-
-    .chairs-cta {
-      margin-top: 8px;
-      font-size: 13px;
-      color: #4b5563;
-      line-height: 1.5;
-    }
-
-    .chairs-cta a {
-      color: #1d4ed8;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .chairs-cta a:hover {
-      text-decoration: underline;
-    }
-
-    .cta-buttons {
-      margin-top: 6px;
-      display: flex;
-      gap: 6px;
-      flex-wrap: wrap;
-    }
-
-    .cta-btn {
-      padding: 7px 10px;
-      border-radius: 999px;
-      border: 1px solid #d1d5db;
-      background: #ffffff;
-      font-size: 13px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      text-decoration: none;
-      color: #111827;
-      cursor: pointer;
-    }
-
-    .cta-btn.primary {
-      background: #3b82f6;
-      color: #f9fafb;
-      border-color: #2563eb;
-      box-shadow:
-        0 0 0 1px rgba(37,99,235,0.9),
-        0 6px 16px rgba(59,130,246,0.55);
-    }
-
-    /* Модалки */
-
-    .modal-backdrop {
-      position: fixed;
-      inset: 0;
-      background: rgba(15,23,42,0.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 30;
-    }
-
-    .modal-backdrop.hidden {
-      display: none;
-    }
-
-    .modal-inner {
-      width: 100%;
-      max-width: 360px;
+    .question-card {
       background: #f9fafb;
-      border-radius: 20px;
-      padding: 18px 16px 12px;
-      box-shadow:
-        0 18px 40px rgba(148,163,184,0.9),
-        0 0 0 1px rgba(191,219,254,0.9);
+      border-radius: 16px;
+      padding: 12px 12px 10px;
       border: 1px solid #e5e7eb;
+      margin-bottom: 8px;
+      position: relative;
+      overflow: hidden;
     }
 
-    .modal-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 6px;
-      color: #111827;
+    .question-card.slide-in {
+      animation: slideIn 0.28s ease-out;
     }
 
-    .modal-text {
-      font-size: 14px;
-      color: #4b5563;
-      line-height: 1.5;
-      margin-bottom: 10px;
-    }
-
-    .modal-actions {
-      display: flex;
-      justify-content: flex-end;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .fade-enter {
-      animation: fadeUp 0.22s ease-out;
-    }
-
-    @keyframes fadeUp {
+    @keyframes slideIn {
       from {
         opacity: 0;
         transform: translateY(4px);
@@ -622,20 +243,437 @@
       }
     }
 
-    @media (max-width: 420px) {
-      .card {
-        border-radius: 16px;
-        padding: 14px 12px 10px;
-      }
-      .logo-brand {
-        font-size: 16px;
-      }
+    .question-block-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #9ca3af;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
 
-    @media (orientation: landscape) and (max-height: 480px) {
+    .mini-pill {
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #e0f2fe;
+      color: #0369a1;
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    .question-text {
+      font-size: 14px;
+      color: #111827;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .option-btn {
+      width: 100%;
+      text-align: left;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      background: #ffffff;
+      color: #111827;
+      font-size: 13px;
+      padding: 8px 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.35;
+      transition:
+        border-color 0.18s ease-out,
+        box-shadow 0.18s ease-out,
+        transform 0.12s ease-out,
+        background 0.18s ease-out;
+    }
+
+    .option-radio {
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      flex-shrink: 0;
+      margin-top: 2px;
+      position: relative;
+    }
+
+    .option-radio::after {
+      content: "";
+      position: absolute;
+      inset: 3px;
+      border-radius: 999px;
+      background: #3b82f6;
+      opacity: 0;
+      transform: scale(0.7);
+      transition: opacity 0.16s ease-out, transform 0.16s ease-out;
+    }
+
+    .option-label {
+      flex: 1;
+    }
+
+    .option-btn.selected {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 1px rgba(59,130,246,0.45);
+      background: #eff6ff;
+      transform: translateY(-1px);
+    }
+
+    .option-btn.selected .option-radio {
+      border-color: #3b82f6;
+    }
+
+    .option-btn.selected .option-radio::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .nav-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 6px;
+      gap: 8px;
+    }
+
+    .nav-row-left {
+      display: flex;
+      gap: 6px;
+    }
+
+    .nav-row-right {
+      display: flex;
+      gap: 6px;
+    }
+
+    .result-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #030712;
+    }
+
+    .result-badge {
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+
+    .result-badge-high {
+      background: #fee2e2;
+      color: #b91c1c;
+    }
+
+    .result-badge-mid {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .result-badge-low {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .result-scroll {
+      max-height: 260px;
+      overflow-y: auto;
+      padding-right: 4px;
+      margin-bottom: 10px;
+    }
+
+    .zone-block {
+      margin-bottom: 8px;
+      padding: 8px 8px 6px;
+      border-radius: 12px;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+    }
+
+    .zone-title {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #111827;
+    }
+
+    .zone-chip {
+      font-size: 11px;
+      padding: 2px 6px;
+      border-radius: 999px;
+      background: #e5e7eb;
+      color: #374151;
+    }
+
+    .zone-text {
+      font-size: 13px;
+      color: #374151;
+      line-height: 1.4;
+    }
+
+    .zone-text ul {
+      padding-left: 18px;
+      margin: 4px 0 0;
+    }
+
+    .result-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-start;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      cursor: pointer;
+      font-size: 12px;
+      color: #374151;
+    }
+
+    .tab-btn.active {
+      background: #3b82f6;
+      color: #f9fafb;
+      border-color: #2563eb;
+      box-shadow:
+        0 0 0 1px rgba(37,99,235,0.9),
+        0 0 12px rgba(59,130,246,0.45);
+    }
+
+    .tabs-hint {
+      font-size: 11px;
+      color: #6b7280;
+      margin-bottom: 6px;
+    }
+
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: 14px;
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      padding: 8px 8px 10px;
+      margin-bottom: 8px;
+    }
+
+    .slide {
+      display: none;
+    }
+
+    .slide.active {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .chair-image-wrap {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .chair-image-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .chair-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+      margin-top: 2px;
+    }
+
+    .chair-tags {
+      font-size: 11px;
+      color: #6b7280;
+      margin-bottom: 4px;
+    }
+
+    .chair-desc {
+      font-size: 13px;
+      color: #374151;
+      line-height: 1.4;
+    }
+
+    .carousel-nav {
+      margin-top: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    .dots {
+      display: inline-flex;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      border: 1px solid #cbd5f5;
+      background: transparent;
+    }
+
+    .dot.active {
+      background: #3b82f6;
+      border-color: #2563eb;
+    }
+
+    .carousel-buttons {
+      display: flex;
+      gap: 4px;
+    }
+
+    .circle-btn {
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .link-btn {
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      background: #ffffff;
+      font-size: 12px;
+      color: #1d4ed8;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .link-btn span.icon {
+      font-size: 14px;
+    }
+
+    .link-btn:hover {
+      background: #eff6ff;
+    }
+
+    .extra-hint {
+      font-size: 11px;
+      color: #6b7280;
+      margin-top: 4px;
+    }
+
+    /* Модалки */
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15,23,42,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 30;
+    }
+
+    .modal-overlay.hidden {
+      display: none;
+    }
+
+    .modal-inner {
+      width: 100%;
+      max-width: 360px;
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 16px 16px 14px;
+      box-shadow:
+        0 18px 40px rgba(148,163,184,0.9),
+        0 0 0 1px rgba(209,213,219,0.9);
+      border: 1px solid #e5e7eb;
+    }
+
+    .modal-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #030712;
+      margin-bottom: 6px;
+    }
+
+    .modal-text {
+      font-size: 13px;
+      color: #374151;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .modal-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    @media (max-width: 420px) {
       .card {
-        transform: scale(0.9);
-        transform-origin: top center;
+        padding: 14px 12px 12px;
+        border-radius: 16px;
+      }
+      .logo-main {
+        font-size: 20px;
+      }
+      .result-scroll {
+        max-height: 220px;
       }
     }
   </style>
@@ -647,92 +685,295 @@
         <div>
           <div class="badge">
             <span class="badge-dot"></span>
-            METTA • Posture
+            METTA • Тест посадки
           </div>
-          <h1>Тест посадки</h1>
+          <h1>Как сейчас сидит твоё тело?</h1>
           <div class="subtitle">
-            7 быстрых вопросов про то, как ты обычно сидишь за компьютером.
+            Короткий тест проверит посадку и подскажет, где спина и шея получают лишнюю нагрузку.
           </div>
+          <button id="howBtn" class="info-btn">
+            <span class="icon">i</span>
+            Как работает тест
+          </button>
         </div>
-        <div class="logo">
-          <div class="logo-brand">METTA</div>
+        <div class="logo-block">
+          <div class="logo-main">METTA</div>
           <div class="logo-sub">ERGONOMIC CHAIRS</div>
         </div>
       </div>
 
-      <div class="main-body">
-        <!-- Экран 1 — интро -->
-        <div id="introScreen" class="screen active">
-          <div class="centered">
-            <div class="intro-text">
-              <strong>Сейчас проверим твою посадку.</strong><br><br>
-              Отвечай честно — это только для тебя. Мы не ставим диагнозы,
-              а даём понятные рекомендации: что изменить в посадке и почему
-              телу от этого станет легче.
-            </div>
-            <div style="margin-top: 16px;">
-              <button id="startTestBtn" class="main-btn">
-                <span>🧍‍♀️</span>
-                <span>Пройти тест</span>
-              </button>
-            </div>
-          </div>
+      <!-- Intro -->
+      <section id="introSection" class="section">
+        <div class="intro">
+          Мы не ставим диагнозы. Это мягкая «перепроверка» посадки:
+          <ul>
+            <li>где перенапрягается поясница;</li>
+            <li>как чувствуют себя шея и голова;</li>
+            <li>что происходит с ногами и общим самочувствием.</li>
+          </ul>
+        </div>
+        <button id="startTestBtn" class="primary-btn">
+          <span>Пройти тест</span> <span>›</span>
+        </button>
+      </section>
+
+      <!-- Quiz -->
+      <section id="quizSection" class="section hidden">
+        <div class="progress-row">
+          <div id="progressText">Вопрос 1 из 7</div>
+          <div id="blockText">Блок: Таз и поясница</div>
+        </div>
+        <div class="progress-bar">
+          <div id="progressFill" class="progress-fill"></div>
         </div>
 
-        <!-- Экран 2 — вопросы -->
-        <div id="questionScreen" class="screen">
-          <div class="progress-wrap">
-            <div class="progress-label" id="progressLabel">Вопрос 1 из 7</div>
-            <div class="progress-bar">
-              <div id="progressFill" class="progress-fill"></div>
-            </div>
+        <div id="questionCard" class="question-card">
+          <div id="blockLabel" class="question-block-label">
+            <span class="mini-pill">Таз и поясница</span>
+            <span>Шаг 1</span>
           </div>
-
-          <div class="question-block">
-            <div class="question-meta" id="questionMeta"></div>
-            <div class="question-title" id="questionTitle"></div>
-            <div class="answers-list" id="answersList"></div>
-            <div class="question-footer">
-              <div class="question-hint" id="questionHint">
-                Выбери вариант, который чаще всего про тебя.
-              </div>
-              <button id="nextBtn" class="secondary-btn">Дальше</button>
-            </div>
-          </div>
+          <div id="questionText" class="question-text"></div>
+          <div id="optionsList" class="options-list"></div>
         </div>
 
-        <!-- Экран 3 — результат -->
-        <div id="resultScreen" class="screen">
-          <div class="result-body" id="resultBody"></div>
-          <div class="bottom-row">
-            <button id="restartBtn" class="secondary-btn">Пройти ещё раз</button>
-            <button id="showChairsBtn" class="main-btn">
-              <span>💺</span><span>Подбор кресла</span>
+        <div class="nav-row">
+          <div class="nav-row-left">
+            <button id="backBtn" class="secondary-btn" disabled>‹ Назад</button>
+          </div>
+          <div class="nav-row-right">
+            <button id="nextBtn" class="primary-btn" disabled>
+              <span>Далее</span> <span>›</span>
             </button>
           </div>
         </div>
+      </section>
+
+      <!-- Result -->
+      <section id="resultSection" class="section hidden">
+        <div class="result-title">Результат теста посадки</div>
+        <div id="resultBadge" class="result-badge result-badge-mid">
+          Общая нагрузка: средний уровень
+        </div>
+        <div class="result-scroll">
+          <div id="resultZones"></div>
+        </div>
+        <div class="result-actions">
+          <button id="showChairsAskBtn" class="primary-btn">
+            <span>Что можно улучшить с креслом?</span>
+          </button>
+          <button id="restartBtn" class="secondary-btn">
+            Пройти тест ещё раз
+          </button>
+        </div>
+      </section>
+
+      <!-- Chairs -->
+      <section id="chairsSection" class="section hidden">
+        <div class="result-title">Кресла Samurai под твои задачи</div>
+        <div class="tabs-hint">
+          По ответам теста мы подобрали модели для разных зон: поясницы, шеи и ног.
+          Переключай вкладки и листай варианты.
+        </div>
+
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="lumbar">Поясница</button>
+          <button class="tab-btn" data-tab="neck">Шея и голова</button>
+          <button class="tab-btn" data-tab="legs">Ноги и стопы</button>
+        </div>
+
+        <!-- Поясница -->
+        <div class="tab-panel active" data-panel="lumbar">
+          <div class="carousel" data-carousel="lumbar">
+            <div class="slide active">
+              <div class="chair-image-wrap">
+                <!-- ЗАГЛУШКА: замените src на официальное фото Samurai KL-1 с metta.ru -->
+                <img src="images/samurai_kl1.jpg" alt="Samurai KL-1">
+              </div>
+              <div class="chair-title">Samurai KL-1</div>
+              <div class="chair-tags">Поясница • Длительная работа за компьютером</div>
+              <div class="chair-desc">
+                Гибкая спинка и выраженная поддержка поясничной зоны помогают держать корпус без постоянного напряжения мышц.
+                Подходит, если ты часто сидишь на краю сиденья или не упираешь поясницу в спинку.
+              </div>
+              <div class="cta-row">
+                <a class="link-btn" href="https://samurai.wr-office.ru/#Catalog?model=Samurai-KL1" target="_blank" rel="noopener noreferrer">
+                  <span class="icon">🌐</span> Открыть на сайте Samurai
+                </a>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="chair-image-wrap">
+                <!-- ЗАГЛУШКА: замените src на официальное фото Samurai S-3 с metta.ru -->
+                <img src="images/samurai_s3.jpg" alt="Samurai S-3">
+              </div>
+              <div class="chair-title">Samurai S-3</div>
+              <div class="chair-tags">Поясница • Гибкая опора спины</div>
+              <div class="chair-desc">
+                Спинка повторяет изгибы позвоночника, а механизм раскачивания позволяет менять положение,
+                разгружая нижнюю часть спины. Хороший вариант, если спина быстро устаёт в «ровной» позе.
+              </div>
+              <div class="cta-row">
+                <a class="link-btn" href="https://samurai.wr-office.ru/#Catalog?model=Samurai-S3" target="_blank" rel="noopener noreferrer">
+                  <span class="icon">🌐</span> Открыть на сайте Samurai
+                </a>
+              </div>
+            </div>
+
+            <div class="carousel-nav">
+              <div class="dots" data-dots="lumbar"></div>
+              <div class="carousel-buttons">
+                <button class="circle-btn" data-prev="lumbar">‹</button>
+                <button class="circle-btn" data-next="lumbar">›</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Шея и голова -->
+        <div class="tab-panel" data-panel="neck">
+          <div class="carousel" data-carousel="neck">
+            <div class="slide active">
+              <div class="chair-image-wrap">
+                <!-- ЗАГЛУШКА: замените src на официальное фото Samurai S-3 -->
+                <img src="images/samurai_s3_headrest.jpg" alt="Samurai S-3">
+              </div>
+              <div class="chair-title">Samurai S-3 с подголовником</div>
+              <div class="chair-tags">Шея и голова • Текст-шей</div>
+              <div class="chair-desc">
+                Высокая спинка и настраиваемый подголовник помогают убрать стойкую привычку тянуть голову вперёд.
+                Подходит, если к вечеру чувствуешь тяжесть в голове, напряжение в шее и плечах.
+              </div>
+              <div class="cta-row">
+                <a class="link-btn" href="https://samurai.wr-office.ru/#Catalog?model=Samurai-S3-Headrest" target="_blank" rel="noopener noreferrer">
+                  <span class="icon">🌐</span> Открыть на сайте Samurai
+                </a>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="chair-image-wrap">
+                <!-- ЗАГЛУШКА: замените src на официальное фото Samurai S-1 -->
+                <img src="images/samurai_s1.jpg" alt="Samurai S-1">
+              </div>
+              <div class="chair-title">Samurai S-1</div>
+              <div class="chair-tags">Шея • Ровная осанка</div>
+              <div class="chair-desc">
+                Анатомическая форма спинки помогает удерживать голову ближе к линии корпуса,
+                снижая нагрузку на шейные позвонки. Подходит, если слегка сутулишься и быстро устаёт шея.
+              </div>
+              <div class="cta-row">
+                <a class="link-btn" href="https://samurai.wr-office.ru/#Catalog?model=Samurai-S1" target="_blank" rel="noopener noreferrer">
+                  <span class="icon">🌐</span> Открыть на сайте Samurai
+                </a>
+              </div>
+            </div>
+
+            <div class="carousel-nav">
+              <div class="dots" data-dots="neck"></div>
+              <div class="carousel-buttons">
+                <button class="circle-btn" data-prev="neck">‹</button>
+                <button class="circle-btn" data-next="neck">›</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ноги и стопы -->
+        <div class="tab-panel" data-panel="legs">
+          <div class="carousel" data-carousel="legs">
+            <div class="slide active">
+              <div class="chair-image-wrap">
+                <!-- ЗАГЛУШКА: замените src на официальное фото Samurai L2-11D или KL-2 с акцентом на регулировку сиденья -->
+                <img src="images/samurai_l2_11d.jpg" alt="Samurai L2-11D">
+              </div>
+              <div class="chair-title">Samurai L2 / KL-серия</div>
+              <div class="chair-tags">Ноги и стопы • Регулировка глубины сиденья</div>
+              <div class="chair-desc">
+                Регулируемая глубина и наклон сиденья помогают убрать давление под бёдрами и добиться,
+                чтобы стопы уверенно стояли на полу или подставке. Подходит, если ноги устают, немеют или «висят» в воздухе.
+              </div>
+              <div class="cta-row">
+                <a class="link-btn" href="https://samurai.wr-office.ru/#Catalog?model=Samurai-L2-or-KL" target="_blank" rel="noopener noreferrer">
+                  <span class="icon">🌐</span> Открыть на сайте Samurai
+                </a>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="chair-image-wrap">
+                <!-- ЗАГЛУШКА: замените src на официальное фото Samurai K-2 -->
+                <img src="images/samurai_k2.jpg" alt="Samurai K-2">
+              </div>
+              <div class="chair-title">Samurai K-2</div>
+              <div class="chair-tags">Ноги • Динамика и опора</div>
+              <div class="chair-desc">
+                Механизм качания и устойчивое основание позволяют мягко менять позу без потери опоры под ногами.
+                Подходит, если любишь двигаться в кресле и при этом хочешь сохранить хорошее кровообращение в ногах.
+              </div>
+              <div class="cta-row">
+                <a class="link-btn" href="https://samurai.wr-office.ru/#Catalog?model=Samurai-K2" target="_blank" rel="noopener noreferrer">
+                  <span class="icon">🌐</span> Открыть на сайте Samurai
+                </a>
+              </div>
+            </div>
+
+            <div class="carousel-nav">
+              <div class="dots" data-dots="legs"></div>
+              <div class="carousel-buttons">
+                <button class="circle-btn" data-prev="legs">‹</button>
+                <button class="circle-btn" data-next="legs">›</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <a class="link-btn" href="https://t.me/Metta_galereya" target="_blank" rel="noopener noreferrer">
+            <span class="icon">💬</span> Написать менеджеру METTA в Telegram
+          </a>
+          <a class="link-btn" href="https://yandex.ru/maps/-/CLs8522j" target="_blank" rel="noopener noreferrer">
+            <span class="icon">📍</span> Салон METTA в Новосибирске на карте
+          </a>
+        </div>
+        <div class="extra-hint">
+          Менеджер поможет подобрать точную комплектацию Samurai под твой рост, задачи и особенности посадки.
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Модалка "Как работает тест" -->
+  <div id="infoModal" class="modal-overlay hidden">
+    <div class="modal-inner">
+      <div class="modal-title">Как работает тест посадки</div>
+      <div class="modal-text">
+        Тест смотрит на три зоны: поясница, шея и голова, ноги.
+        Каждый ответ добавляет «баллы нагрузки». Чем больше баллов — тем выше риск, что мышцы работают вместо кресла.<br><br>
+        В конце ты получишь понятный разбор и рекомендации по посадке. А по желанию — подборку кресел Samurai, которые могут снять часть нагрузки.
+      </div>
+      <div class="modal-actions">
+        <button id="infoCloseBtn" class="secondary-btn">Понятно</button>
       </div>
     </div>
   </div>
 
-  <!-- Модалка с вопросом про кресла -->
-  <div id="chairsModal" class="modal-backdrop hidden">
+  <!-- Модалка "Показать кресла?" -->
+  <div id="chairsAskModal" class="modal-overlay hidden">
     <div class="modal-inner">
-      <div class="modal-title">Подбор кресла METTA</div>
+      <div class="modal-title">Показать кресла Samurai под твой результат?</div>
       <div class="modal-text">
-        По ответам видно, какие зоны тела перегружены больше всего.
-        Хочешь, покажу примеры кресел из линейки Samurai на сайте
-        <strong>samurai.wr-office.ru</strong>, которые помогут разгрузить спину и шею?
+        На основе ответов мы можем предложить несколько моделей, которые помогут разгрузить поясницу, шею и ноги.
       </div>
       <div class="modal-actions">
-        <button id="chairsNoBtn" class="secondary-btn">Пока нет</button>
-        <button id="chairsYesBtn" class="main-btn">Да, показать</button>
+        <button id="chairsAskNoBtn" class="secondary-btn">Нет, достаточно отчёта</button>
+        <button id="chairsAskYesBtn" class="primary-btn">Да, показать варианты</button>
       </div>
     </div>
   </div>
 
   <script>
-    // --- Аудио для выбора ответов ---
+    // --- ЗВУК ---
     let audioCtx = null;
 
     function ensureAudioCtx() {
@@ -755,10 +996,10 @@
         osc.connect(gain);
         gain.connect(audioCtx.destination);
         gain.gain.setValueAtTime(0.0001, now);
-        gain.gain.exponentialRampToValueAtTime(0.14, now + 0.01);
-        gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.13);
+        gain.gain.exponentialRampToValueAtTime(0.16, now + 0.02);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.16);
         osc.start(now);
-        osc.stop(now + 0.15);
+        osc.stop(now + 0.2);
       } catch (e) {}
     }
 
@@ -770,649 +1011,677 @@
       } catch (e) {}
     }
 
-    function tactileTap() {
+    function tactileClick() {
       playClickSound();
-      vibrate(20);
+      vibrate(15);
     }
 
-    // --- Данные вопросов ---
+    // --- ДАННЫЕ ТЕСТА ---
+
     const questions = [
       {
-        id: "q1",
-        block: "Поясница и таз",
-        zone: "lumbar",
+        id: 1,
+        block: "Таз и поясница",
+        blockKey: "lumbar",
         text: "Как ты обычно сидишь на стуле/кресле?",
         options: [
           {
-            text: "Сажусь на край сиденья, спина почти не касается спинки.",
+            text: "Сажусь на край сиденья, спина почти не касается спинки",
             scores: { lumbar: 2 }
           },
           {
-            text: "Сижу глубоко, но поясница не упирается в спинку.",
+            text: "Сижу глубоко, но поясница не упирается в спинку",
             scores: { lumbar: 1 }
           },
           {
-            text: "Сижу глубоко, поясница хорошо касается спинки / валика.",
+            text: "Сижу глубоко, поясница хорошо касается спинки / валика",
             scores: { lumbar: 0 }
           },
           {
-            text: "Постоянно двигаюсь — то на краю, то глубоко.",
+            text: "Постоянно двигаюсь, то на краю, то глубоко",
             scores: { lumbar: 1 }
           }
         ]
       },
       {
-        id: "q2",
+        id: 2,
         block: "Спина и грудной отдел",
-        zone: "lumbar",
+        blockKey: "upper",
         text: "Как чаще всего выглядит твоя спина, когда работаешь?",
         options: [
           {
-            text: "Сильно сутулюсь, плечи вперёд.",
-            scores: { lumbar: 2 }
+            text: "Сильно сутулюсь, плечи вперёд",
+            scores: { lumbar: 1, neck: 1 }
           },
           {
-            text: "Чуть-чуть сутулюсь, периодически замечаю это.",
+            text: "Чуть-чуть сутулюсь, замечаю это",
+            scores: { lumbar: 0.5, neck: 0.5 }
+          },
+          {
+            text: "Сижу более-менее ровно, но быстро устаю",
             scores: { lumbar: 1 }
           },
           {
-            text: "Сижу более-менее ровно, но быстро устаю.",
-            scores: { lumbar: 1 }
-          },
-          {
-            text: "Спина ровная, кажется, что держу осанку без сильного напряжения.",
+            text: "Спина ровная, кажется, что держу осанку без напряжения",
             scores: { lumbar: 0 }
           }
         ]
       },
       {
-        id: "q3",
+        id: 3,
         block: "Голова и шея",
-        zone: "neck",
+        blockKey: "neck",
         text: "Где находится твоя голова относительно корпуса, когда смотришь в экран?",
         options: [
           {
-            text: "Шея вытянута вперёд, как будто тянусь к экрану.",
+            text: "Шея вытянута вперёд, как будто тянусь к экрану",
             scores: { neck: 2 }
           },
           {
-            text: "Подбородок часто опускается вниз, голова немного наклонена.",
+            text: "Подбородок часто опускается вниз, голова немного наклонена",
             scores: { neck: 1 }
           },
           {
-            text: "Голова примерно над плечами, без сильного наклона.",
+            text: "Голова примерно над плечами, без сильного наклона",
             scores: { neck: 0 }
           },
           {
-            text: "Часто наклоняю голову набок / опираюсь щекой на руку.",
-            scores: { neck: 1 }
+            text: "Часто наклоняю голову набок / опираюсь щекой на руку",
+            scores: { neck: 1.5 }
           }
         ]
       },
       {
-        id: "q4",
-        block: "Опора для шеи",
-        zone: "neck",
+        id: 4,
+        block: "Опора шеи",
+        blockKey: "neck",
         text: "Есть ли у тебя поддержка головы или шеи?",
         options: [
           {
-            text: "Подголовник кресла — время от времени опираюсь.",
-            scores: { neck: 0 }
+            text: "Подголовник кресла — время от времени опираюсь",
+            scores: { neck: 0.5 }
           },
           {
-            text: "Подушка/валик под шеей.",
-            scores: { neck: 1 }
+            text: "Подушка/валик под шеей",
+            scores: { neck: 0.5 }
           },
           {
-            text: "Никакой поддержки, вся нагрузка на мышцы.",
+            text: "Никакой поддержки, вся нагрузка на мышцы",
             scores: { neck: 2 }
           },
           {
-            text: "Иногда откидываюсь назад и опираюсь, но редко.",
-            scores: { neck: 1 }
+            text: "Иногда откидываюсь назад и опираюсь, но редко",
+            scores: { neck: 1.5 }
           }
         ]
       },
       {
-        id: "q5",
-        block: "Ощущения в шее и плечах",
-        zone: "neck",
+        id: 5,
+        block: "Ощущения в шее",
+        blockKey: "neck",
         text: "Что чаще всего чувствуешь в области шеи и плеч к концу дня?",
         options: [
           {
-            text: "Тяжесть в голове, напряжение в шее.",
+            text: "Тяжесть в голове, напряжение в шее",
             scores: { neck: 2 }
           },
           {
-            text: "Болят плечи / трапеции.",
-            scores: { neck: 2 }
+            text: "Болят плечи / трапеции",
+            scores: { neck: 1.5 }
           },
           {
-            text: "Усталость, но без яркой боли.",
+            text: "Усталость, но без яркой боли",
             scores: { neck: 1 }
           },
           {
-            text: "Особых ощущений нет.",
+            text: "Особых ощущений нет",
             scores: { neck: 0 }
           }
         ]
       },
       {
-        id: "q6",
+        id: 6,
         block: "Ноги и стопы",
-        zone: "legs",
+        blockKey: "legs",
         text: "Как обычно стоят ноги, когда ты работаешь?",
         options: [
           {
-            text: "Нога на ногу / подворачиваю ступню под себя.",
+            text: "Нога на ногу / подворачиваю ступню под себя",
             scores: { legs: 2 }
           },
           {
-            text: "Ступни не достают до пола / висят.",
+            text: "Ступни не достают до пола / висят",
             scores: { legs: 2 }
           },
           {
-            text: "Ступни стоят на полу, но одна нога уходит под кресло или на носок.",
+            text: "Ступни стоят на полу, но один носок выше, другая нога под креслом",
             scores: { legs: 1 }
           },
           {
-            text: "Две стопы полностью на полу или подставке, примерно на ширине плеч.",
+            text: "Две стопы полностью на полу или подставке, примерно на ширине плеч",
             scores: { legs: 0 }
           }
         ]
       },
       {
-        id: "q7",
+        id: 7,
         block: "Общее самочувствие",
-        zone: "general",
+        blockKey: "general",
         text: "Что с ощущениями в теле после 2–3 часов работы?",
         options: [
           {
-            text: "Тянущая боль в пояснице.",
-            scores: { lumbar: 2, general: 1 }
+            text: "Тянущая боль в пояснице",
+            scores: { lumbar: 2, general: 1.5 }
           },
           {
-            text: "Усталость в шее и плечах.",
-            scores: { neck: 2, general: 1 }
+            text: "Усталость в шее и плечах",
+            scores: { neck: 1.5, general: 1 }
           },
           {
-            text: "Тяжесть в ногах / онемение.",
-            scores: { legs: 2, general: 1 }
+            text: "Тяжесть в ногах / онемение",
+            scores: { legs: 1.5, general: 1 }
           },
           {
-            text: "Быстро устаю, но не понимаю откуда.",
+            text: "Быстро устаю, не понимаю откуда",
             scores: { general: 2 }
           },
           {
-            text: "Чувствую себя нормально.",
+            text: "Чувствую себя нормально",
             scores: { general: 0 }
           }
         ]
       }
     ];
 
-    const introScreen = document.getElementById("introScreen");
-    const questionScreen = document.getElementById("questionScreen");
-    const resultScreen = document.getElementById("resultScreen");
+    const introSection = document.getElementById("introSection");
+    const quizSection = document.getElementById("quizSection");
+    const resultSection = document.getElementById("resultSection");
+    const chairsSection = document.getElementById("chairsSection");
 
     const startTestBtn = document.getElementById("startTestBtn");
-    const progressLabel = document.getElementById("progressLabel");
+    const questionCard = document.getElementById("questionCard");
+    const blockLabel = document.getElementById("blockLabel");
+    const questionText = document.getElementById("questionText");
+    const optionsList = document.getElementById("optionsList");
+    const progressText = document.getElementById("progressText");
+    const blockText = document.getElementById("blockText");
     const progressFill = document.getElementById("progressFill");
-    const questionMeta = document.getElementById("questionMeta");
-    const questionTitle = document.getElementById("questionTitle");
-    const answersList = document.getElementById("answersList");
+    const backBtn = document.getElementById("backBtn");
     const nextBtn = document.getElementById("nextBtn");
-    const resultBody = document.getElementById("resultBody");
-    const restartBtn = document.getElementById("restartBtn");
-    const showChairsBtn = document.getElementById("showChairsBtn");
 
-    const chairsModal = document.getElementById("chairsModal");
-    const chairsYesBtn = document.getElementById("chairsYesBtn");
-    const chairsNoBtn = document.getElementById("chairsNoBtn");
+    const resultBadge = document.getElementById("resultBadge");
+    const resultZones = document.getElementById("resultZones");
+    const showChairsAskBtn = document.getElementById("showChairsAskBtn");
+    const restartBtn = document.getElementById("restartBtn");
+
+    const infoModal = document.getElementById("infoModal");
+    const infoCloseBtn = document.getElementById("infoCloseBtn");
+    const howBtn = document.getElementById("howBtn");
+
+    const chairsAskModal = document.getElementById("chairsAskModal");
+    const chairsAskYesBtn = document.getElementById("chairsAskYesBtn");
+    const chairsAskNoBtn = document.getElementById("chairsAskNoBtn");
 
     let currentIndex = 0;
-    let selectedOptionIndex = null;
-    const answers = {};  // questionId -> optionIndex
+    let answers = new Array(questions.length).fill(null);
 
-    function showScreen(el) {
-      [introScreen, questionScreen, resultScreen].forEach(s => {
-        s.classList.remove("active");
-      });
-      el.classList.add("active");
+    function showIntro() {
+      introSection.classList.remove("hidden");
+      quizSection.classList.add("hidden");
+      resultSection.classList.add("hidden");
+      chairsSection.classList.add("hidden");
+    }
+
+    function startQuiz() {
+      answers = new Array(questions.length).fill(null);
+      currentIndex = 0;
+      introSection.classList.add("hidden");
+      resultSection.classList.add("hidden");
+      chairsSection.classList.add("hidden");
+      quizSection.classList.remove("hidden");
+      renderQuestion();
     }
 
     function renderQuestion() {
-      const total = questions.length;
       const q = questions[currentIndex];
+      const total = questions.length;
+      const num = currentIndex + 1;
 
-      progressLabel.textContent = `Вопрос ${currentIndex + 1} из ${total}`;
-      const pct = ((currentIndex) / total) * 100;
-      progressFill.style.width = `${pct}%`;
+      questionCard.classList.remove("slide-in");
+      void questionCard.offsetWidth;
+      questionCard.classList.add("slide-in");
 
-      questionMeta.textContent = q.block;
-      questionTitle.textContent = q.text;
-      answersList.innerHTML = "";
-      selectedOptionIndex = answers[q.id] != null ? answers[q.id] : null;
+      progressText.textContent = `Вопрос ${num} из ${total}`;
+      blockText.textContent = `Блок: ${q.block}`;
+      const progressPercent = (num - 1) / total * 100;
+      progressFill.style.width = `${progressPercent}%`;
+
+      blockLabel.innerHTML = `
+        <span class="mini-pill">${q.block}</span>
+        <span>Шаг ${num}</span>
+      `;
+
+      questionText.textContent = q.text;
+      optionsList.innerHTML = "";
 
       q.options.forEach((opt, idx) => {
         const btn = document.createElement("button");
-        btn.className = "answer-btn fade-enter";
-        if (selectedOptionIndex === idx) {
+        btn.type = "button";
+        btn.className = "option-btn";
+        if (answers[currentIndex] === idx) {
           btn.classList.add("selected");
         }
-        btn.dataset.index = idx;
-
-        const dot = document.createElement("div");
-        dot.className = "answer-bullet";
-
-        const span = document.createElement("div");
-        span.className = "answer-text";
-        span.textContent = opt.text;
-
-        btn.appendChild(dot);
-        btn.appendChild(span);
-
+        btn.innerHTML = `
+          <span class="option-radio"></span>
+          <span class="option-label">${opt.text}</span>
+        `;
         btn.addEventListener("click", () => {
-          tactileTap();
-          selectedOptionIndex = idx;
-          answers[q.id] = idx;
-          document.querySelectorAll(".answer-btn").forEach(b => b.classList.remove("selected"));
+          tactileClick();
+          answers[currentIndex] = idx;
+          Array.from(optionsList.children).forEach(child =>
+            child.classList.remove("selected")
+          );
           btn.classList.add("selected");
+          updateNavButtons();
         });
-
-        answersList.appendChild(btn);
+        optionsList.appendChild(btn);
       });
 
-      nextBtn.textContent = currentIndex === total - 1 ? "Показать результат" : "Дальше";
+      updateNavButtons();
     }
 
-    function goNextQuestion() {
-      const q = questions[currentIndex];
-      if (answers[q.id] == null) {
-        // мягкое подталкивание
-        questionHint.textContent = "Выбери вариант, который ближе всего к твоей обычной посадке.";
-        questionHint.style.color = "#b91c1c";
-        setTimeout(() => {
-          questionHint.style.color = "#6b7280";
-        }, 1200);
-        return;
-      }
+    function updateNavButtons() {
+      backBtn.disabled = currentIndex === 0;
+      const hasAnswer = answers[currentIndex] !== null;
+      nextBtn.disabled = !hasAnswer;
+      nextBtn.textContent = currentIndex === questions.length - 1 ? "Смотреть результат" : "Далее ›";
+    }
 
+    function goNext() {
+      if (answers[currentIndex] === null) return;
       if (currentIndex < questions.length - 1) {
-        currentIndex++;
+        currentIndex += 1;
         renderQuestion();
       } else {
         showResult();
       }
     }
 
-    function getRiskLevel(score) {
-      if (score <= 1) return "low";
-      if (score <= 3) return "mid";
-      return "high";
+    function goBack() {
+      if (currentIndex === 0) return;
+      currentIndex -= 1;
+      renderQuestion();
     }
 
-    function riskLabel(level) {
-      if (level === "low") return "низкий риск";
-      if (level === "mid") return "средний риск";
-      return "повышенный риск";
+    function calcScores() {
+      const sum = { lumbar: 0, neck: 0, legs: 0, general: 0 };
+      questions.forEach((q, idx) => {
+        const optIndex = answers[idx];
+        if (optIndex == null) return;
+        const opt = q.options[optIndex];
+        const sc = opt.scores || {};
+        Object.keys(sc).forEach(key => {
+          sum[key] += sc[key];
+        });
+      });
+      return sum;
     }
 
-    function riskSentence(level, zoneName) {
-      if (level === "low") {
-        return `${zoneName}: в целом посадка довольно щадящая, важных тревожных сигналов сейчас немного.`;
-      } else if (level === "mid") {
-        return `${zoneName}: часть позиций тела даёт лишнюю нагрузку, но ситуацию ещё можно развернуть простыми изменениями посадки.`;
+    function getLevelBadge(totalScore) {
+      if (totalScore <= 3) {
+        return {
+          className: "result-badge result-badge-low",
+          text: "Общая нагрузка: низкий уровень"
+        };
+      } else if (totalScore <= 7) {
+        return {
+          className: "result-badge result-badge-mid",
+          text: "Общая нагрузка: средний уровень"
+        };
       } else {
-        return `${zoneName}: по ответам видно устойчивую перегрузку — если ничего не менять, риск хронического напряжения и боли выше среднего.`;
+        return {
+          className: "result-badge result-badge-high",
+          text: "Общая нагрузка: повышенный риск хронического напряжения"
+        };
       }
     }
 
-    function lumberText(level) {
-      if (level === "low") {
-        return "Ты хотя бы часть времени даёшь пояснице опору спинкой кресла. Это снижает нагрузку на мышцы и диски поясничного отдела.";
-      }
-      if (level === "mid") {
-        return "Иногда поясница опирается на спинку, но часто корпус держат мышцы. Из-за этого они быстрее устают, а к вечеру может появляться тянущая боль внизу спины.";
-      }
-      return "Частая посадка на краю сиденья или без плотного контакта поясницы со спинкой заставляет мышцы поясницы постоянно «держать» корпус. Это типичный сценарий хронизации боли в пояснице.";
-    }
+    function getZoneText(sum) {
+      const parts = [];
 
-    function neckText(level) {
-      if (level === "low") {
-        return "Положение головы близко к нейтральному: голова не сильно уходит вперёд, шея периодически получает опору.";
-      }
-      if (level === "mid") {
-        return "Голова периодически смещается вперёд или вниз, а шея не всегда получает опору. Это даёт фоновое напряжение мышц и усталость к вечеру.";
-      }
-      return "Голова стабильно уходит вперёд относительно корпуса, а шея редко опирается на подголовник/спинку. Это увеличивает нагрузку на шейные позвонки и мышцы, отсюда — тяжесть в голове, зажимы в шее и плечах.";
-    }
+      // Поясница
+      let lumbarLevel = "low";
+      if (sum.lumbar >= 3) lumbarLevel = "high";
+      else if (sum.lumbar >= 1.5) lumbarLevel = "mid";
 
-    function legsText(level) {
-      if (level === "low") {
-        return "Стопы чаще всего стоят стабильно: на полу или подставке, что помогает кровообращению в ногах.";
+      if (lumbarLevel === "high") {
+        parts.push({
+          zone: "Поясница",
+          chip: "риск повышен",
+          text: `
+            • по ответам видно, что поясница часто остаётся без стабильной опоры —
+            сидение на краю или без контакта с спинкой заставляет мышцы постоянно «держать» корпус;
+            <br>• это создаёт тянущие ощущения и усталость уже через пару часов работы;
+            <br>• при такой схеме посадки легко сформировать привычку компенсировать дискомфорт наклоном корпуса и головы вперёд.`
+        });
+      } else if (lumbarLevel === "mid") {
+        parts.push({
+          zone: "Поясница",
+          chip: "есть нагрузка",
+          text: `
+            • поясница периодически получает опору, но не всегда — отсюда чувство усталости в конце дня;
+            <br>• скорее всего, ты иногда «сползаешь» вперёд или меняешь положение с глубокой посадки на край сиденья;
+            <br>• это не критично, но при большой загрузке может давать тянущие ощущения в нижней части спины.`
+        });
+      } else {
+        parts.push({
+          zone: "Поясница",
+          chip: "всё неплохо",
+          text: `
+            • поясница чаще всего опирается на спинку или валик;
+            <br>• мышцы спины работают в более щадящем режиме, риск перегрузки ниже;
+            <br>• важно сохранить эту привычку и не «уезжать» на край сиденья, когда устаёшь.`
+        });
       }
-      if (level === "mid") {
-        return "Периодически ноги уезжают под кресло или на носок. Это делает посадку менее устойчивой и может давать ощущение «застойности» в ногах.";
-      }
-      return "Поза «нога на ногу», подворачивание ступни под себя или висящие стопы нарушают кровообращение и распределение нагрузки. Из-за этого чаще появляются тяжесть, онемение и усталость в ногах к концу дня.";
-    }
 
-    function generalText(level) {
-      if (level === "low") {
-        return "Общее самочувствие после рабочей сессии близко к нормальному — это хороший знак, но лёгкая профилактика всё равно не будет лишней.";
+      // Шея и голова
+      let neckLevel = "low";
+      if (sum.neck >= 5) neckLevel = "high";
+      else if (sum.neck >= 2.5) neckLevel = "mid";
+
+      if (neckLevel === "high") {
+        parts.push({
+          zone: "Шея и голова",
+          chip: "риск повышен",
+          text: `
+            • голова часто уходит вперёд или вниз, а шея остается без устойчивой опоры;
+            <br>• это классический сценарий «текст-шей» — нагрузка на шейные позвонки растёт в несколько раз;
+            <br>• отсюда тяжесть в голове, напряжение в шее, возможные головные боли к вечеру.`
+        });
+      } else if (neckLevel === "mid") {
+        parts.push({
+          zone: "Шея и голова",
+          chip: "есть нагрузка",
+          text: `
+            • иногда голова смещается вперёд или набок, опора на подголовник / спинку используется не до конца;
+            <br>• мышцы шеи периодически берут на себя то, что могло бы сделать кресло;
+            <br>• при росте нагрузок (дедлайны, долгие созвоны) это может усиливать усталость в верхней части спины.`
+        });
+      } else {
+        parts.push({
+          zone: "Шея и голова",
+          chip: "всё неплохо",
+          text: `
+            • голова чаще остаётся над плечами, без сильного наклона;
+            <br>• опора для шеи периодически используется — это снижает нагрузку на мышцы;
+            <br>• важно сохранить привычку не тянуться к экрану и не «проваливаться» в сутулость.`
+        });
       }
-      if (level === "mid") {
-        return "Организм уже даёт понятные сигналы: усталость в спине, шее или ногах. Это повод мягко поменять посадку, пока тело не «закрепило» неудачные привычки.";
+
+      // Ноги и стопы
+      let legsLevel = "low";
+      if (sum.legs >= 3) legsLevel = "high";
+      else if (sum.legs >= 1.5) legsLevel = "mid";
+
+      if (legsLevel === "high") {
+        parts.push({
+          zone: "Ноги и стопы",
+          chip: "риск повышен",
+          text: `
+            • ноги периодически «висят», подворачиваются или уходят в неустойчивое положение;
+            <br>• это ухудшает кровообращение, даёт тяжесть и онемение к концу дня;
+            <br>• тело пытается компенсировать дискомфорт, меняя посадку и перегружая спину и шею.`
+        });
+      } else if (legsLevel === "mid") {
+        parts.push({
+          zone: "Ноги и стопы",
+          chip: "есть нагрузка",
+          text: `
+            • чаще всего опора под стопами есть, но положение ног не всегда стабильное;
+            <br>• периодические позы «нога на ногу» или подвороты могут создавать лишнее напряжение;
+            <br>• при длительной работе это добавляет усталости в ногах и пояснице.`
+        });
+      } else {
+        parts.push({
+          zone: "Ноги и стопы",
+          chip: "всё неплохо",
+          text: `
+            • стопы, как правило, стоят на полу или подставке, вес распределён ровнее;
+            <br>• риск нарушения кровообращения ниже, ноги меньше «затекают»;
+            <br>• важно следить, чтобы кресло по высоте подходило под твой рост.`
+        });
       }
-      return "Тело регулярно сообщает о перегрузке: выраженная боль, тяжесть или быстрая утомляемость. В такой ситуации полезно менять и посадку, и режим работы (паузы, микродвижение, выбор кресла).";
+
+      // Общее самочувствие
+      let genLevel = "low";
+      if (sum.general >= 3.5) genLevel = "high";
+      else if (sum.general >= 1.5) genLevel = "mid";
+
+      if (genLevel === "high") {
+        parts.push({
+          zone: "Общее состояние",
+          chip: "нагрузка высокая",
+          text: `
+            • тело сигнализирует о перегрузке: появляются явные боли или сильная усталость;
+            <br>• несколько зон одновременно работают «на пределе», что повышает риск закрепления хронического напряжения;
+            <br>• имеет смысл комплексно пересобрать рабочее место: посадку, высоту стола, кресло и режим пауз.`
+        });
+      } else if (genLevel === "mid") {
+        parts.push({
+          zone: "Общее состояние",
+          chip: "есть напряжение",
+          text: `
+            • усталость появляется не сразу, но к концу дня ощущается заметнее;
+            <br>• при высоких нагрузках стресс и сидячая работа могут «сложиться» и усиливать друг друга;
+            <br>• небольшие изменения в посадке и кресле уже могут дать заметное облегчение.`
+        });
+      } else {
+        parts.push({
+          zone: "Общее состояние",
+          chip: "стабильно",
+          text: `
+            • сейчас организм в целом справляется с нагрузкой;
+            <br>• если сохранить правильную посадку и добавить регулярные короткие паузы, есть шанс надолго удержать такое состояние;
+            <br>• при росте объёма работы можно подумать о более точной подстройке кресла под себя.`
+        });
+      }
+
+      return parts;
     }
 
     function showResult() {
-      // Финальный прогресс
-      progressFill.style.width = "100%";
+      quizSection.classList.add("hidden");
+      resultSection.classList.remove("hidden");
+      chairsSection.classList.add("hidden");
 
-      // Считаем баллы по зонам
-      const scores = { lumbar: 0, neck: 0, legs: 0, general: 0 };
-      questions.forEach(q => {
-        const idx = answers[q.id];
-        if (idx == null) return;
-        const opt = q.options[idx];
-        if (!opt.scores) return;
-        for (const key in opt.scores) {
-          scores[key] += opt.scores[key];
-        }
+      const sum = calcScores();
+      const totalScore =
+        sum.lumbar + sum.neck + sum.legs + sum.general;
+      const badge = getLevelBadge(totalScore);
+      resultBadge.className = badge.className;
+      resultBadge.textContent = badge.text;
+
+      const zones = getZoneText(sum);
+      resultZones.innerHTML = "";
+      zones.forEach(zone => {
+        const block = document.createElement("div");
+        block.className = "zone-block";
+        block.innerHTML = `
+          <div class="zone-title">
+            <span>${zone.zone}</span>
+            <span class="zone-chip">${zone.chip}</span>
+          </div>
+          <div class="zone-text">${zone.text}</div>
+        `;
+        resultZones.appendChild(block);
+      });
+    }
+
+    function showChairsConfirm() {
+      chairsAskModal.classList.remove("hidden");
+    }
+
+    function closeChairsConfirm() {
+      chairsAskModal.classList.add("hidden");
+    }
+
+    function showChairs() {
+      closeChairsConfirm();
+      chairsSection.classList.remove("hidden");
+      // чуть прокрутим к началу блока с креслами
+      chairsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      initAllCarousels();
+    }
+
+    // --- КАРУСЕЛИ и ВКЛАДКИ ---
+
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const tabPanels = document.querySelectorAll(".tab-panel");
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        tactileClick();
+        const tab = btn.getAttribute("data-tab");
+        tabButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        tabPanels.forEach(panel => {
+          const panelKey = panel.getAttribute("data-panel");
+          panel.classList.toggle("active", panelKey === tab);
+        });
+      });
+    });
+
+    const carouselState = {
+      lumbar: 0,
+      neck: 0,
+      legs: 0
+    };
+
+    function initCarousel(key) {
+      const carousel = document.querySelector(`.carousel[data-carousel="${key}"]`);
+      if (!carousel) return;
+      const slides = carousel.querySelectorAll(".slide");
+      const dotsContainer = document.querySelector(`.dots[data-dots="${key}"]`);
+      dotsContainer.innerHTML = "";
+
+      slides.forEach((_, idx) => {
+        const dot = document.createElement("div");
+        dot.className = "dot" + (idx === 0 ? " active" : "");
+        dot.addEventListener("click", () => {
+          tactileClick();
+          carouselState[key] = idx;
+          updateCarousel(key);
+        });
+        dotsContainer.appendChild(dot);
       });
 
-      const lumbarLevel = getRiskLevel(scores.lumbar);
-      const neckLevel = getRiskLevel(scores.neck);
-      const legsLevel = getRiskLevel(scores.legs);
-      const generalLevel = getRiskLevel(scores.general);
+      updateCarousel(key);
 
-      // Определяем основную зону риска
-      let mainZone = "сбалансированная картина";
-      let mainKey = null;
-      let maxScore = 0;
-      for (const key of ["lumbar","neck","legs"]) {
-        if (scores[key] > maxScore) {
-          maxScore = scores[key];
-          mainKey = key;
-        }
-      }
-      if (mainKey === "lumbar") mainZone = "поясница и нижняя часть спины";
-      else if (mainKey === "neck") mainZone = "шея и голова";
-      else if (mainKey === "legs") mainZone = "ноги и стопы";
-
-      let warningText = "";
-      if (scores.lumbar >= 4 || scores.neck >= 4 || scores.legs >= 4 || scores.general >= 3) {
-        warningText = "⚠️ Такое сочетание позиций тела даёт средний–высокий риск хронического напряжения и усталости. Хорошая новость в том, что даже небольшие изменения посадки заметно снижают нагрузку.";
-      }
-
-      const zonesHtml = `
-        <div class="result-title">🧾 Результат теста посадки</div>
-        <div class="result-intro">
-          По ответам видно, как распределяется нагрузка между поясницей, шеей и ногами.
-          Основная зона, которая просит внимания: <strong>${mainZone}</strong>.
-        </div>
-
-        <div class="zone-block">
-          <div class="zone-header">
-            <div class="zone-title">Поясница</div>
-            <div class="risk-pill ${lumbarLevel === "low" ? "risk-low" : lumbarLevel === "mid" ? "risk-mid" : "risk-high"}">
-              ${riskLabel(lumbarLevel)}
-            </div>
-          </div>
-          <div class="zone-text">
-            ${riskSentence(lumbarLevel, "Поясница")}
-            <br><br>
-            ${lumberText(lumbarLevel)}
-          </div>
-        </div>
-
-        <div class="zone-block">
-          <div class="zone-header">
-            <div class="zone-title">Шея и голова</div>
-            <div class="risk-pill ${neckLevel === "low" ? "risk-low" : neckLevel === "mid" ? "risk-mid" : "risk-high"}">
-              ${riskLabel(neckLevel)}
-            </div>
-          </div>
-          <div class="zone-text">
-            ${riskSentence(neckLevel, "Шея и голова")}
-            <br><br>
-            ${neckText(neckLevel)}
-          </div>
-        </div>
-
-        <div class="zone-block">
-          <div class="zone-header">
-            <div class="zone-title">Ноги и стопы</div>
-            <div class="risk-pill ${legsLevel === "low" ? "risk-low" : legsLevel === "mid" ? "risk-mid" : "risk-high"}">
-              ${riskLabel(legsLevel)}
-            </div>
-          </div>
-          <div class="zone-text">
-            ${riskSentence(legsLevel, "Ноги и стопы")}
-            <br><br>
-            ${legsText(legsLevel)}
-          </div>
-        </div>
-
-        <div class="zone-block">
-          <div class="zone-header">
-            <div class="zone-title">Общее самочувствие</div>
-            <div class="risk-pill ${generalLevel === "low" ? "risk-low" : generalLevel === "mid" ? "risk-mid" : "risk-high"}">
-              ${riskLabel(generalLevel)}
-            </div>
-          </div>
-          <div class="zone-text">
-            ${riskSentence(generalLevel, "Общее состояние")}
-            <br><br>
-            ${generalText(generalLevel)}
-          </div>
-        </div>
-
-        ${warningText ? `<div class="result-warning">${warningText}</div>` : ""}
-      `;
-
-      resultBody.innerHTML = zonesHtml + chairsSectionHtml();
-      attachCarouselLogic(); // подключаем слайдер
-      showScreen(resultScreen);
-
-      // Плавно показ модалки с креслами
-      setTimeout(() => {
-        chairsModal.classList.remove("hidden");
-      }, 350);
-    }
-
-    // --- HTML блока с креслами (изначально скрыт) ---
-    function chairsSectionHtml() {
-      return `
-        <div id="chairsSection" class="chairs-section">
-          <div class="chairs-title">💺 Кресла Samurai, которые помогут посадке</div>
-          <div class="chairs-sub">
-            Ниже — примеры кресел METTA из линейки <strong>Samurai</strong> на сайте
-            <strong>samurai.wr-office.ru</strong>. У них выраженная поясничная поддержка,
-            высокая спинка и подголовник — всё, что помогает разгрузить спину и шею при долгой работе.
-          </div>
-
-          <div class="carousel">
-            <div id="carouselTrack" class="carousel-track">
-              <div class="chair-card">
-                <div class="chair-photo">
-                  <div>
-                    Samurai SL-3.04<br>
-                    <span style="font-size:11px;font-weight:400;">максимальная опора для спины и шеи</span>
-                  </div>
-                </div>
-                <div class="chair-tag">Поясница + шея</div>
-                <div class="chair-name">Samurai SL-3.04</div>
-                <div class="chair-desc">
-                  Высокая спинка с анатомическим изгибом, выраженная поясничная поддержка и регулируемый подголовник.
-                  Синхромеханизм и слайдер сиденья помогают сохранять контакт спины со спинкой даже при смене позы —
-                  это снижает риск тянущей боли в пояснице и напряжения в шее.
-                </div>
-              </div>
-
-              <div class="chair-card">
-                <div class="chair-photo" style="background: radial-gradient(circle at 20% 0,#fee2e2 0,#fecaca 40%,#fca5a5 100%);">
-                  <div>
-                    Samurai SL-1<br>
-                    <span style="font-size:11px;font-weight:400;">универсальное кресло для долгой работы</span>
-                  </div>
-                </div>
-                <div class="chair-tag">Баланс посадки</div>
-                <div class="chair-name">Samurai SL-1</div>
-                <div class="chair-desc">
-                  Анатомическая спинка, регулируемый подголовник и гибкий «позвоночник» спинки распределяют нагрузку
-                  по всей длине спины. Хороший вариант, если устают и поясница, и шея, и хочется «универсального солдата»
-                  для 6–12 часов за столом.
-                </div>
-              </div>
-
-              <div class="chair-card">
-                <div class="chair-photo" style="background: radial-gradient(circle at 20% 0,#dcfce7 0,#bbf7d0 40%,#86efac 100%);">
-                  <div>
-                    Samurai c глубокой регулировкой<br>
-                    <span style="font-size:11px;font-weight:400;">устойчивая опора для ног</span>
-                  </div>
-                </div>
-                <div class="chair-tag">Ноги и стопы</div>
-                <div class="chair-name">Samurai (серия с регулировкой глубины сиденья)</div>
-                <div class="chair-desc">
-                  Модели Samurai с регулировкой глубины и высоты сиденья помогают поставить стопы на пол или подставку,
-                  чтобы колени были под углом ~90°. Это уменьшает онемение и тяжесть в ногах при длительной работе.
-                </div>
-              </div>
-            </div>
-
-            <div class="carousel-nav">
-              <button id="prevChair" class="carousel-btn">‹</button>
-              <div class="carousel-dots">
-                <div class="carousel-dot active" data-dot="0"></div>
-                <div class="carousel-dot" data-dot="1"></div>
-                <div class="carousel-dot" data-dot="2"></div>
-              </div>
-              <button id="nextChair" class="carousel-btn">›</button>
-            </div>
-          </div>
-
-          <div class="chairs-cta">
-            Хочешь примерить кресло вживую или задать вопросы по моделям Samurai?
-            Можно <strong>написать менеджеру</strong> или приехать в шоурум METTA в Новосибирске.
-            <div class="cta-buttons">
-              <a class="cta-btn primary" href="https://t.me" target="_blank" rel="noopener noreferrer">
-                💬 Написать менеджеру
-              </a>
-              <a class="cta-btn" href="https://yandex.ru/maps/-/CLs8522j" target="_blank" rel="noopener noreferrer">
-                📍 Прийти в салон METTA (Новосибирск, Колыбельная)
-              </a>
-            </div>
-          </div>
-        </div>
-      `;
-    }
-
-    function attachCarouselLogic() {
-      const track = document.getElementById("carouselTrack");
-      const prevBtn = document.getElementById("prevChair");
-      const nextBtn = document.getElementById("nextChair");
-      const dots = document.querySelectorAll(".carousel-dot");
-      if (!track || !prevBtn || !nextBtn) return;
-
-      let index = 0;
-      const total = 3;
-
-      function updateCarousel() {
-        const offset = -index * 100;
-        track.style.transform = `translateX(${offset}%)`;
-        dots.forEach((d, i) => {
-          d.classList.toggle("active", i === index);
-        });
-      }
+      const prevBtn = carousel.querySelector(`button[data-prev="${key}"]`);
+      const nextBtn = carousel.querySelector(`button[data-next="${key}"]`);
 
       prevBtn.addEventListener("click", () => {
-        tactileTap();
-        index = (index - 1 + total) % total;
-        updateCarousel();
+        tactileClick();
+        const count = slides.length;
+        carouselState[key] = (carouselState[key] - 1 + count) % count;
+        updateCarousel(key);
       });
 
       nextBtn.addEventListener("click", () => {
-        tactileTap();
-        index = (index + 1) % total;
-        updateCarousel();
-      });
-
-      dots.forEach(d => {
-        d.addEventListener("click", () => {
-          tactileTap();
-          const i = parseInt(d.dataset.dot, 10);
-          if (!isNaN(i)) {
-            index = i;
-            updateCarousel();
-          }
-        });
+        tactileClick();
+        const count = slides.length;
+        carouselState[key] = (carouselState[key] + 1) % count;
+        updateCarousel(key);
       });
     }
 
-    // --- Обработчики кнопок ---
+    function updateCarousel(key) {
+      const carousel = document.querySelector(`.carousel[data-carousel="${key}"]`);
+      if (!carousel) return;
+      const slides = carousel.querySelectorAll(".slide");
+      const dots = document.querySelectorAll(`.dots[data-dots="${key}"] .dot`);
+      const activeIndex = carouselState[key];
+
+      slides.forEach((slide, idx) => {
+        slide.classList.toggle("active", idx === activeIndex);
+      });
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle("active", idx === activeIndex);
+      });
+    }
+
+    let carouselsInitialized = false;
+    function initAllCarousels() {
+      if (carouselsInitialized) return;
+      ["lumbar", "neck", "legs"].forEach(key => initCarousel(key));
+      carouselsInitialized = true;
+    }
+
+    // --- МОДАЛКИ ---
+
+    howBtn.addEventListener("click", () => {
+      tactileClick();
+      infoModal.classList.remove("hidden");
+    });
+
+    infoCloseBtn.addEventListener("click", () => {
+      tactileClick();
+      infoModal.classList.add("hidden");
+    });
+
+    infoModal.addEventListener("click", (e) => {
+      if (e.target === infoModal) {
+        tactileClick();
+        infoModal.classList.add("hidden");
+      }
+    });
+
+    showChairsAskBtn.addEventListener("click", () => {
+      tactileClick();
+      showChairsConfirm();
+    });
+
+    chairsAskYesBtn.addEventListener("click", () => {
+      tactileClick();
+      showChairs();
+    });
+
+    chairsAskNoBtn.addEventListener("click", () => {
+      tactileClick();
+      closeChairsConfirm();
+    });
+
+    chairsAskModal.addEventListener("click", (e) => {
+      if (e.target === chairsAskModal) {
+        tactileClick();
+        closeChairsConfirm();
+      }
+    });
+
+    // --- КНОПКИ НАВИГАЦИИ ---
+
     startTestBtn.addEventListener("click", () => {
-      tactileTap();
-      currentIndex = 0;
-      showScreen(questionScreen);
-      renderQuestion();
+      tactileClick();
+      startQuiz();
+    });
+
+    backBtn.addEventListener("click", () => {
+      tactileClick();
+      goBack();
     });
 
     nextBtn.addEventListener("click", () => {
-      tactileTap();
-      goNextQuestion();
+      tactileClick();
+      goNext();
     });
 
     restartBtn.addEventListener("click", () => {
-      tactileTap();
-      // очистка
-      for (const key in answers) delete answers[key];
-      currentIndex = 0;
-      selectedOptionIndex = null;
-      document.getElementById("chairsSection")?.classList.remove("fade-enter");
-      showScreen(questionScreen);
-      renderQuestion();
-    });
-
-    showChairsBtn.addEventListener("click", () => {
-      tactileTap();
-      const section = document.getElementById("chairsSection");
-      if (section) {
-        section.style.display = "block";
-        section.classList.add("fade-enter");
-        section.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    });
-
-    chairsYesBtn.addEventListener("click", () => {
-      tactileTap();
-      chairsModal.classList.add("hidden");
-      const section = document.getElementById("chairsSection");
-      if (section) {
-        section.style.display = "block";
-        section.classList.add("fade-enter");
-        section.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    });
-
-    chairsNoBtn.addEventListener("click", () => {
-      tactileTap();
-      chairsModal.classList.add("hidden");
-    });
-
-    chairsModal.addEventListener("click", (e) => {
-      if (e.target === chairsModal) {
-        tactileTap();
-        chairsModal.classList.add("hidden");
-      }
+      tactileClick();
+      startQuiz();
     });
 
     // Стартовое состояние
-    // (ничего не делаем — показывается интро)
+    showIntro();
   </script>
 </body>
 </html>
