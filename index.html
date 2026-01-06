@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -129,13 +130,8 @@
       background: #ffffff;
     }
 
-    .section {
-      margin-top: 10px;
-    }
-
-    .hidden {
-      display: none;
-    }
+    .section { margin-top: 10px; }
+    .hidden { display: none; }
 
     .intro {
       font-size: 14px;
@@ -168,11 +164,7 @@
       gap: 6px;
     }
 
-    .primary-btn:disabled {
-      opacity: 0.4;
-      box-shadow: none;
-      cursor: default;
-    }
+    .primary-btn:disabled { opacity: 0.4; box-shadow: none; cursor: default; }
 
     .secondary-btn {
       padding: 8px 14px;
@@ -187,10 +179,7 @@
       gap: 4px;
     }
 
-    .secondary-btn:disabled {
-      opacity: 0.4;
-      cursor: default;
-    }
+    .secondary-btn:disabled { opacity: 0.4; cursor: default; }
 
     .progress-row {
       display: flex;
@@ -228,14 +217,8 @@
       overflow: hidden;
     }
 
-    .question-card.slide-in {
-      animation: slideIn 0.28s ease-out;
-    }
-
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateY(4px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    .question-card.slide-in { animation: slideIn 0.28s ease-out; }
+    @keyframes slideIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
 
     .question-block-label {
       font-size: 11px;
@@ -257,18 +240,9 @@
       font-weight: 500;
     }
 
-    .question-text {
-      font-size: 14px;
-      color: #111827;
-      margin-bottom: 8px;
-      line-height: 1.4;
-    }
+    .question-text { font-size: 14px; color: #111827; margin-bottom: 8px; line-height: 1.4; }
 
-    .options-list {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
+    .options-list { display: flex; flex-direction: column; gap: 6px; }
 
     .option-btn {
       width: 100%;
@@ -312,9 +286,7 @@
       transition: opacity 0.16s ease-out, transform 0.16s ease-out;
     }
 
-    .option-label {
-      flex: 1;
-    }
+    .option-label { flex: 1; }
 
     .option-btn.selected {
       border-color: #3b82f6;
@@ -323,14 +295,8 @@
       transform: translateY(-1px);
     }
 
-    .option-btn.selected .option-radio {
-      border-color: #3b82f6;
-    }
-
-    .option-btn.selected .option-radio::after {
-      opacity: 1;
-      transform: scale(1);
-    }
+    .option-btn.selected .option-radio { border-color: #3b82f6; }
+    .option-btn.selected .option-radio::after { opacity: 1; transform: scale(1); }
 
     .nav-row {
       display: flex;
@@ -438,11 +404,7 @@
         0 0 12px rgba(59,130,246,0.45);
     }
 
-    .tabs-hint {
-      font-size: 11px;
-      color: #6b7280;
-      margin-bottom: 6px;
-    }
+    .tabs-hint { font-size: 11px; color: #6b7280; margin-bottom: 6px; }
 
     .tab-panel { display: none; }
     .tab-panel.active { display: block; }
@@ -481,24 +443,9 @@
       object-fit: contain;
     }
 
-    .chair-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: #111827;
-      margin-top: 2px;
-    }
-
-    .chair-tags {
-      font-size: 11px;
-      color: #6b7280;
-      margin-bottom: 4px;
-    }
-
-    .chair-desc {
-      font-size: 13px;
-      color: #374151;
-      line-height: 1.4;
-    }
+    .chair-title { font-size: 14px; font-weight: 600; color: #111827; margin-top: 2px; }
+    .chair-tags { font-size: 11px; color: #6b7280; margin-bottom: 4px; }
+    .chair-desc { font-size: 13px; color: #374151; line-height: 1.4; }
 
     .carousel-nav {
       margin-top: 6px;
@@ -509,11 +456,7 @@
       color: #6b7280;
     }
 
-    .dots {
-      display: inline-flex;
-      gap: 4px;
-      align-items: center;
-    }
+    .dots { display: inline-flex; gap: 4px; align-items: center; }
 
     .dot {
       width: 6px;
@@ -523,10 +466,7 @@
       background: transparent;
     }
 
-    .dot.active {
-      background: #3b82f6;
-      border-color: #2563eb;
-    }
+    .dot.active { background: #3b82f6; border-color: #2563eb; }
 
     .carousel-buttons { display: flex; gap: 4px; }
 
@@ -566,11 +506,7 @@
     .link-btn span.icon { font-size: 14px; }
     .link-btn:hover { background: #eff6ff; }
 
-    .extra-hint {
-      font-size: 11px;
-      color: #6b7280;
-      margin-top: 4px;
-    }
+    .extra-hint { font-size: 11px; color: #6b7280; margin-top: 4px; }
 
     /* Модалки */
     .modal-overlay {
@@ -597,19 +533,8 @@
       border: 1px solid #e5e7eb;
     }
 
-    .modal-title {
-      font-size: 16px;
-      font-weight: 600;
-      color: #030712;
-      margin-bottom: 6px;
-    }
-
-    .modal-text {
-      font-size: 13px;
-      color: #374151;
-      line-height: 1.5;
-      margin-bottom: 10px;
-    }
+    .modal-title { font-size: 16px; font-weight: 600; color: #030712; margin-bottom: 6px; }
+    .modal-text { font-size: 13px; color: #374151; line-height: 1.5; margin-bottom: 10px; }
 
     .modal-actions {
       display: flex;
@@ -714,31 +639,37 @@
         </div>
       </section>
 
-      <!-- Chairs (ОБНОВЛЕНО: модели + фото) -->
+      <!-- Chairs (ПЕРЕДЕЛАНО: разделы + состав кресел) -->
       <section id="chairsSection" class="section hidden">
         <div class="result-title">Кресла METTA под твои задачи</div>
-        <div class="tabs-hint">
-          По ответам теста мы подобрали модели для разных зон: поясницы, шеи и ног.
+
+        <div class="tabs-hint" id="tabsHint">
+          По ответам теста мы подобрали модели для разных зон: спины, шеи и сиденья.
           Переключай вкладки и листай варианты.
         </div>
 
         <div class="tabs">
-          <button class="tab-btn active" data-tab="lumbar">Поясница</button>
-          <button class="tab-btn" data-tab="neck">Шея и голова</button>
-          <button class="tab-btn" data-tab="legs">Ноги и стопы</button>
+          <button class="tab-btn active" data-tab="back">Спина и поясница</button>
+          <button class="tab-btn" data-tab="neck">Шея и плечи</button>
+          <button class="tab-btn" data-tab="seat">Сиденье</button>
         </div>
 
-        <!-- Поясница -->
-        <div class="tab-panel active" data-panel="lumbar">
-          <div class="carousel" data-carousel="lumbar">
+        <!-- Спина и поясница (ТЕКСТ ОСТАВЛЯЕМ) -->
+        <div class="tab-panel active" data-panel="back">
+          <div class="tabs-hint">
+            По ответам теста мы подобрали модели для разных зон: поясницы, шеи и ног.
+            Переключай вкладки и листай варианты.
+          </div>
+
+          <div class="carousel" data-carousel="back">
 
             <!-- Equalizer -->
             <div class="slide active">
               <div class="chair-image-wrap">
-                <img src="images/Equalizer.png" alt="Equalizer">
+                <img class="img-fallback" data-file="Equalizer.png" alt="Equalizer">
               </div>
               <div class="chair-title">Equalizer</div>
-              <div class="chair-tags">Поясница • Индивидуальная поддержка позвоночника</div>
+              <div class="chair-tags">Спина и поясница • Индивидуальная поддержка позвоночника</div>
               <div class="chair-desc">
                 Максимально точная настройка под спину:
                 <ul>
@@ -749,68 +680,13 @@
               </div>
             </div>
 
-            <!-- Ergolife V1 -->
-            <div class="slide">
-              <div class="chair-image-wrap">
-                <img src="images/Ergolife%20V1.png" alt="Ergolife V1">
-              </div>
-              <div class="chair-title">Ergolife V1</div>
-              <div class="chair-tags">Поясница • База для ежедневной работы</div>
-              <div class="chair-desc">
-                Надёжный вариант, когда нужен комфорт без лишних опций:
-                <ul>
-                  <li>дышащая сетчатая спинка</li>
-                  <li>2D-поддержка поясницы</li>
-                  <li>мягкое объёмное сиденье</li>
-                  <li>регулировка высоты и жёсткости качания с фиксацией</li>
-                  <li>стальной каркас и корпус</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Ergolife V3 -->
-            <div class="slide">
-              <div class="chair-image-wrap">
-                <img src="images/Ergolife%20V3.png" alt="Ergolife V3">
-              </div>
-              <div class="chair-title">Ergolife V3</div>
-              <div class="chair-tags">Поясница • Динамическая посадка</div>
-              <div class="chair-desc">
-                Переход к “живому” креслу, которое помогает разгружать поясницу:
-                <ul>
-                  <li>синхромеханизм — меньше статической нагрузки</li>
-                  <li>натяжное сиденье с двухзонной регулировкой жёсткости</li>
-                  <li>настраиваемый подголовник и 2D-поясничная поддержка</li>
-                  <li>ручная настройка жёсткости качания</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Samurai V2 -->
-            <div class="slide">
-              <div class="chair-image-wrap">
-                <img src="images/Samurai%20V2.png" alt="Samurai V2">
-              </div>
-              <div class="chair-title">Samurai V2</div>
-              <div class="chair-tags">Поясница • Точная настройка под себя</div>
-              <div class="chair-desc">
-                Универсальный вариант для длительной работы и активной посадки:
-                <ul>
-                  <li>регулируемая 3D-поясничная поддержка</li>
-                  <li>слайдер глубины сиденья (6 положений)</li>
-                  <li>синхромеханизм — снижает усталость</li>
-                  <li>смещённый центр качания — ноги остаются на полу</li>
-                </ul>
-              </div>
-            </div>
-
             <!-- Yoga V1 -->
             <div class="slide">
               <div class="chair-image-wrap">
-                <img src="images/Yoga%20V1.png" alt="Yoga V1 (Black Edition)">
+                <img class="img-fallback" data-file="Yoga V1.png" alt="Yoga V1 (Black Edition)">
               </div>
               <div class="chair-title">Yoga V1 (Black Edition)</div>
-              <div class="chair-tags">Поясница • Гибкий позвоночник</div>
+              <div class="chair-tags">Спина и поясница • Гибкий позвоночник</div>
               <div class="chair-desc">
                 Базовая модель линейки Yoga — когда хочется “живую” поддержку спины:
                 <ul>
@@ -822,87 +698,90 @@
               </div>
             </div>
 
-            <!-- Yoga V3 -->
+            <!-- Yoga Move -->
             <div class="slide">
               <div class="chair-image-wrap">
-                <img src="images/Yoga%20V3.png" alt="Yoga V3 (Triumph)">
+                <img class="img-fallback" data-file="Yoga Move.png" alt="Yoga Move">
               </div>
-              <div class="chair-title">Yoga V3 (Triumph)</div>
-              <div class="chair-tags">Поясница • Флагман Yoga</div>
+              <div class="chair-title">Yoga Move</div>
+              <div class="chair-tags">Спина и поясница • Динамическая посадка</div>
               <div class="chair-desc">
-                Флагман линейки Yoga — максимум комфорта и поддержки для длительных нагрузок:
+                Для тех, кто любит менять положение, но хочет, чтобы спина получала поддержку:
                 <ul>
-                  <li>гибкий позвоночник ручной сборки</li>
-                  <li>дышащая сетка + боковая поддержка</li>
-                  <li>каркас и пятилучье из литого алюминия</li>
-                  <li>максимальная комплектация и современные регулировки</li>
+                  <li>механизм Move — увеличенный диапазон отклонения</li>
+                  <li>мультиблок с фиксацией положений</li>
+                  <li>динамика снижает статическую нагрузку на поясницу</li>
+                  <li>комфортно “пересаживаться” в течение дня</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Samurai V3 -->
+            <div class="slide">
+              <div class="chair-image-wrap">
+                <img class="img-fallback" data-file="Samurai V3.png" alt="Samurai V3">
+              </div>
+              <div class="chair-title">Samurai V3</div>
+              <div class="chair-tags">Спина и поясница • Комфорт надолго</div>
+              <div class="chair-desc">
+                Мягкая посадка + точная настройка помогает разгрузить поясницу:
+                <ul>
+                  <li>регулируемая 3D-поясничная поддержка</li>
+                  <li>синхромеханизм — меньше статической нагрузки</li>
+                  <li>подходит для долгой работы дома и в офисе</li>
                 </ul>
               </div>
             </div>
 
             <div class="carousel-nav">
-              <div class="dots" data-dots="lumbar"></div>
+              <div class="dots" data-dots="back"></div>
               <div class="carousel-buttons">
-                <button class="circle-btn" data-prev="lumbar">‹</button>
-                <button class="circle-btn" data-next="lumbar">›</button>
+                <button class="circle-btn" data-prev="back">‹</button>
+                <button class="circle-btn" data-next="back">›</button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Шея и голова -->
+        <!-- Шея и плечи -->
         <div class="tab-panel" data-panel="neck">
+          <div class="tabs-hint">
+            Тут важна разгрузка трапеций и стабильная опора верхней части спины: когда плечи “поднимаются” и шея устаёт,
+            кресло должно забрать часть нагрузки на себя за счёт формы спинки и настроек.
+          </div>
+
           <div class="carousel" data-carousel="neck">
 
-            <!-- Ergolife V2 -->
+            <!-- Samurai V4 -->
             <div class="slide active">
               <div class="chair-image-wrap">
-                <img src="images/Ergolife%20V2.png" alt="Ergolife V2">
+                <img class="img-fallback" data-file="Samurai V4.png" alt="Samurai V4">
               </div>
-              <div class="chair-title">Ergolife V2</div>
-              <div class="chair-tags">Шея и голова • Подголовник</div>
+              <div class="chair-title">Samurai V4</div>
+              <div class="chair-tags">Шея и плечи • Максимум настроек</div>
               <div class="chair-desc">
-                Комфортный шаг вперёд для разгрузки шеи:
+                Когда нужно “донастроить” посадку под шею и верх спины:
                 <ul>
-                  <li>мягкий подголовник — снижает нагрузку на шею</li>
-                  <li>регулируемая поясничная поддержка</li>
-                  <li>объёмное тканевое сиденье</li>
-                  <li>стальной каркас и надёжный газлифт</li>
+                  <li>поддержка верхней части спины — меньше сутулости</li>
+                  <li>регулировки помогают снять напряжение с плеч</li>
+                  <li>комфортно при созвонах и долгой концентрации</li>
                 </ul>
               </div>
             </div>
 
-            <!-- Samurai V1 -->
+            <!-- Yoga V3 -->
             <div class="slide">
               <div class="chair-image-wrap">
-                <img src="images/Samurai%20V1.png" alt="Samurai V1 (Black Edition)">
+                <img class="img-fallback" data-file="Yoga V3.png" alt="Yoga V3 (Triumph)">
               </div>
-              <div class="chair-title">Samurai V1 (Black Edition)</div>
-              <div class="chair-tags">Шея и голова • Много регулировок</div>
+              <div class="chair-title">Yoga V3 (Triumph)</div>
+              <div class="chair-tags">Шея и плечи • Флагман Yoga</div>
               <div class="chair-desc">
-                Когда важно “донастроить” посадку под себя:
+                Когда важно, чтобы кресло удерживало спину “сверху” и не давало плечам уходить вперёд:
                 <ul>
-                  <li>3D-подголовник и 4D-подлокотники</li>
-                  <li>анатомическая спинка повторяет форму позвоночника</li>
-                  <li>сетка — комфортно в долгой работе</li>
-                  <li>стальной каркас</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Yoga V2 -->
-            <div class="slide">
-              <div class="chair-image-wrap">
-                <img src="images/Yoga%20V2.png" alt="Yoga V2">
-              </div>
-              <div class="chair-title">Yoga V2</div>
-              <div class="chair-tags">Шея и голова • Поддержка в любом положении</div>
-              <div class="chair-desc">
-                Для тех, кто часто откидывается и хочет стабильную поддержку:
-                <ul>
-                  <li>гибкий позвоночник — поддержка спины в любом положении</li>
-                  <li>комфорт при длительной работе и отдыхе</li>
-                  <li>когда шея устает — важно, чтобы верх спины “держался” креслом</li>
+                  <li>гибкий позвоночник — поддержка по всей высоте спины</li>
+                  <li>комфортно при длительных нагрузках</li>
+                  <li>лучше сохраняется нейтральное положение головы</li>
                 </ul>
               </div>
             </div>
@@ -917,68 +796,54 @@
           </div>
         </div>
 
-        <!-- Ноги и стопы -->
-        <div class="tab-panel" data-panel="legs">
-          <div class="carousel" data-carousel="legs">
+        <!-- Сиденье -->
+        <div class="tab-panel" data-panel="seat">
+          <div class="tabs-hint">
+            Сиденье влияет на всё: если глубина и распределение давления “не твои”, тело начинает ёрзать, ноги затекают,
+            а поясница теряет опору. Тут мы собрали модели, где посадка и поддержка веса особенно продуманы.
+          </div>
 
-            <!-- Ergolife V4 -->
+          <div class="carousel" data-carousel="seat">
+
+            <!-- Yoga V2 -->
             <div class="slide active">
               <div class="chair-image-wrap">
-                <img src="images/Ergolife%20V4.png" alt="Ergolife V4">
+                <img class="img-fallback" data-file="Yoga V2.png" alt="Yoga V2">
               </div>
-              <div class="chair-title">Ergolife V4</div>
-              <div class="chair-tags">Ноги и стопы • Глубина сиденья</div>
+              <div class="chair-title">Yoga V2</div>
+              <div class="chair-tags">Сиденье • Баланс комфорта и динамики</div>
               <div class="chair-desc">
-                Сильно помогает, если ноги “висят” или затекают:
+                Когда хочется “правильную” посадку без постоянных поправок:
                 <ul>
-                  <li>регулировка глубины сиденья</li>
-                  <li>раздельное синхронное отклонение спинки и сиденья</li>
-                  <li>фиксация наклона спинки в 4 положениях</li>
-                  <li>мягкое прошитое сиденье, стальной корпус</li>
+                  <li>устойчивое распределение нагрузки на сиденье</li>
+                  <li>комфортно при длительной работе</li>
+                  <li>в связке со спинкой помогает держать ровную базу</li>
                 </ul>
               </div>
             </div>
 
-            <!-- Yoga Move -->
+            <!-- Samurai V2 -->
             <div class="slide">
               <div class="chair-image-wrap">
-                <img src="images/Yoga%20Move.png" alt="Yoga Move">
+                <img class="img-fallback" data-file="Samurai V2.png" alt="Samurai V2">
               </div>
-              <div class="chair-title">Yoga Move</div>
-              <div class="chair-tags">Ноги и стопы • Устойчивая опора при отклонении</div>
+              <div class="chair-title">Samurai V2</div>
+              <div class="chair-tags">Сиденье • Настройка под рост и длину бедра</div>
               <div class="chair-desc">
-                Если любишь менять положение и “раскачиваться”, но важно, чтобы ноги не теряли опору:
+                Хороший вариант, если важно подогнать посадку и не пережимать ноги:
                 <ul>
-                  <li>механизм Move — увеличенный диапазон отклонения</li>
-                  <li>мультиблок с фиксацией положений</li>
-                  <li>динамическая посадка без жёсткой фиксации</li>
-                  <li>устойчивое положение ног при отклонении</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Samurai V3 -->
-            <div class="slide">
-              <div class="chair-image-wrap">
-                <img src="images/Samurai%20V3.png" alt="Samurai V3">
-              </div>
-              <div class="chair-title">Samurai V3</div>
-              <div class="chair-tags">Ноги и стопы • Комфорт дома и надолго</div>
-              <div class="chair-desc">
-                Мягкая посадка + широкая настройка помогает меньше “крутить позы”:
-                <ul>
-                  <li>регулируемая 3D-поясничная поддержка</li>
-                  <li>мягкая посадка, комфорт при длительной работе</li>
-                  <li>5D-подлокотники с поворотом на 360°</li>
+                  <li>слайдер глубины сиденья (6 положений)</li>
+                  <li>помогает сохранить опору под стопами</li>
+                  <li>меньше риска затекания и “скольжения” вперёд</li>
                 </ul>
               </div>
             </div>
 
             <div class="carousel-nav">
-              <div class="dots" data-dots="legs"></div>
+              <div class="dots" data-dots="seat"></div>
               <div class="carousel-buttons">
-                <button class="circle-btn" data-prev="legs">‹</button>
-                <button class="circle-btn" data-next="legs">›</button>
+                <button class="circle-btn" data-prev="seat">‹</button>
+                <button class="circle-btn" data-next="seat">›</button>
               </div>
             </div>
           </div>
@@ -1019,7 +884,7 @@
     <div class="modal-inner">
       <div class="modal-title">Показать кресла под твой результат?</div>
       <div class="modal-text">
-        На основе ответов мы можем предложить несколько моделей, которые помогут разгрузить поясницу, шею и ноги.
+        На основе ответов мы можем предложить несколько моделей, которые помогут разгрузить спину, шею и улучшить посадку на сиденье.
       </div>
       <div class="modal-actions">
         <button id="chairsAskNoBtn" class="secondary-btn">Нет, достаточно отчёта</button>
@@ -1070,6 +935,37 @@
     function tactileClick() {
       playClickSound();
       vibrate(15);
+    }
+
+    // --- КАРТИНКИ: fallback (images/ -> Images/ -> root) ---
+    function setImgWithFallback(imgEl, fileName) {
+      const paths = [
+        "images/" + fileName,
+        "Images/" + fileName,
+        fileName
+      ];
+      let i = 0;
+      const tryNext = () => {
+        if (i >= paths.length) return;
+        imgEl.src = paths[i];
+        i += 1;
+      };
+      imgEl.onerror = () => {
+        imgEl.onerror = null;
+        tryNext();
+        // восстановим onerror для следующей попытки
+        imgEl.onerror = () => { imgEl.onerror = null; tryNext(); imgEl.onerror = () => { imgEl.onerror = null; tryNext(); }; };
+      };
+      tryNext();
+    }
+
+    function initImageFallbacks() {
+      const imgs = document.querySelectorAll("img.img-fallback");
+      imgs.forEach(img => {
+        const file = img.getAttribute("data-file");
+        if (!file) return;
+        setImgWithFallback(img, file);
+      });
     }
 
     // --- ДАННЫЕ ТЕСТА ---
@@ -1484,6 +1380,7 @@
       chairsSection.classList.remove("hidden");
       chairsSection.scrollIntoView({ behavior: "smooth", block: "start" });
       initAllCarousels();
+      initImageFallbacks();
     }
 
     // --- КАРУСЕЛИ и ВКЛАДКИ ---
@@ -1503,7 +1400,7 @@
       });
     });
 
-    const carouselState = { lumbar: 0, neck: 0, legs: 0 };
+    const carouselState = { back: 0, neck: 0, seat: 0 };
 
     function initCarousel(key) {
       const carousel = document.querySelector(`.carousel[data-carousel="${key}"]`);
@@ -1557,7 +1454,7 @@
     let carouselsInitialized = false;
     function initAllCarousels() {
       if (carouselsInitialized) return;
-      ["lumbar", "neck", "legs"].forEach(key => initCarousel(key));
+      ["back", "neck", "seat"].forEach(key => initCarousel(key));
       carouselsInitialized = true;
     }
 
@@ -1624,6 +1521,8 @@
 
     // Стартовое состояние
     showIntro();
+    initImageFallbacks();
   </script>
 </body>
 </html>
+```
