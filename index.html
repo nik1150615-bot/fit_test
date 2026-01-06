@@ -233,14 +233,8 @@
     }
 
     @keyframes slideIn {
-      from {
-        opacity: 0;
-        transform: translateY(4px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .question-block-label {
@@ -346,15 +340,8 @@
       gap: 8px;
     }
 
-    .nav-row-left {
-      display: flex;
-      gap: 6px;
-    }
-
-    .nav-row-right {
-      display: flex;
-      gap: 6px;
-    }
+    .nav-row-left { display: flex; gap: 6px; }
+    .nav-row-right { display: flex; gap: 6px; }
 
     .result-title {
       font-size: 16px;
@@ -373,20 +360,9 @@
       margin-bottom: 8px;
     }
 
-    .result-badge-high {
-      background: #fee2e2;
-      color: #b91c1c;
-    }
-
-    .result-badge-mid {
-      background: #fef3c7;
-      color: #92400e;
-    }
-
-    .result-badge-low {
-      background: #dcfce7;
-      color: #166534;
-    }
+    .result-badge-high { background: #fee2e2; color: #b91c1c; }
+    .result-badge-mid  { background: #fef3c7; color: #92400e; }
+    .result-badge-low  { background: #dcfce7; color: #166534; }
 
     .result-scroll {
       max-height: 260px;
@@ -427,10 +403,7 @@
       line-height: 1.4;
     }
 
-    .zone-text ul {
-      padding-left: 18px;
-      margin: 4px 0 0;
-    }
+    .zone-text ul { padding-left: 18px; margin: 4px 0 0; }
 
     .result-actions {
       display: flex;
@@ -471,13 +444,8 @@
       margin-bottom: 6px;
     }
 
-    .tab-panel {
-      display: none;
-    }
-
-    .tab-panel.active {
-      display: block;
-    }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
 
     .carousel {
       position: relative;
@@ -489,10 +457,7 @@
       margin-bottom: 8px;
     }
 
-    .slide {
-      display: none;
-    }
-
+    .slide { display: none; }
     .slide.active {
       display: flex;
       flex-direction: column;
@@ -563,10 +528,7 @@
       border-color: #2563eb;
     }
 
-    .carousel-buttons {
-      display: flex;
-      gap: 4px;
-    }
+    .carousel-buttons { display: flex; gap: 4px; }
 
     .circle-btn {
       width: 24px;
@@ -601,13 +563,8 @@
       gap: 6px;
     }
 
-    .link-btn span.icon {
-      font-size: 14px;
-    }
-
-    .link-btn:hover {
-      background: #eff6ff;
-    }
+    .link-btn span.icon { font-size: 14px; }
+    .link-btn:hover { background: #eff6ff; }
 
     .extra-hint {
       font-size: 11px;
@@ -616,7 +573,6 @@
     }
 
     /* Модалки */
-
     .modal-overlay {
       position: fixed;
       inset: 0;
@@ -627,9 +583,7 @@
       z-index: 30;
     }
 
-    .modal-overlay.hidden {
-      display: none;
-    }
+    .modal-overlay.hidden { display: none; }
 
     .modal-inner {
       width: 100%;
@@ -665,16 +619,9 @@
     }
 
     @media (max-width: 420px) {
-      .card {
-        padding: 14px 12px 12px;
-        border-radius: 16px;
-      }
-      .logo-main {
-        font-size: 20px;
-      }
-      .result-scroll {
-        max-height: 220px;
-      }
+      .card { padding: 14px 12px 12px; border-radius: 16px; }
+      .logo-main { font-size: 20px; }
+      .result-scroll { max-height: 220px; }
     }
   </style>
 </head>
@@ -767,9 +714,9 @@
         </div>
       </section>
 
-      <!-- Chairs -->
+      <!-- Chairs (ОБНОВЛЕНО: модели + фото) -->
       <section id="chairsSection" class="section hidden">
-        <div class="result-title">Кресла Samurai под твои задачи</div>
+        <div class="result-title">Кресла METTA под твои задачи</div>
         <div class="tabs-hint">
           По ответам теста мы подобрали модели для разных зон: поясницы, шеи и ног.
           Переключай вкладки и листай варианты.
@@ -784,39 +731,112 @@
         <!-- Поясница -->
         <div class="tab-panel active" data-panel="lumbar">
           <div class="carousel" data-carousel="lumbar">
+
+            <!-- Equalizer -->
             <div class="slide active">
               <div class="chair-image-wrap">
-                <!-- ЗАГЛУШКА: замените src на официальное фото Samurai KL-1 с metta.ru -->
-                <img src="images/samurai_kl1.jpg" alt="Samurai KL-1">
+                <img src="images/Equalizer.png" alt="Equalizer">
               </div>
-              <div class="chair-title">Samurai KL-1</div>
-              <div class="chair-tags">Поясница • Длительная работа за компьютером</div>
+              <div class="chair-title">Equalizer</div>
+              <div class="chair-tags">Поясница • Индивидуальная поддержка позвоночника</div>
               <div class="chair-desc">
-                Гибкая спинка и выраженная поддержка поясничной зоны помогают держать корпус без постоянного напряжения мышц.
-                Подходит, если ты часто сидишь на краю сиденья или не упираешь поясницу в спинку.
-              </div>
-              <div class="cta-row">
-                <a class="link-btn" href="https://samurai.wr-office.ru/#Catalog?model=Samurai-KL1" target="_blank" rel="noopener noreferrer">
-                  <span class="icon">🌐</span> Открыть на сайте Samurai
-                </a>
+                Максимально точная настройка под спину:
+                <ul>
+                  <li>9 независимых модулей под каждый отдел позвоночника</li>
+                  <li>поддержка сохраняется в разных позах, меньше “держать спину мышцами”</li>
+                  <li>особенно актуально при хронической усталости поясницы</li>
+                </ul>
               </div>
             </div>
 
+            <!-- Ergolife V1 -->
             <div class="slide">
               <div class="chair-image-wrap">
-                <!-- ЗАГЛУШКА: замените src на официальное фото Samurai S-3 с metta.ru -->
-                <img src="images/samurai_s3.jpg" alt="Samurai S-3">
+                <img src="images/Ergolife%20V1.png" alt="Ergolife V1">
               </div>
-              <div class="chair-title">Samurai S-3</div>
-              <div class="chair-tags">Поясница • Гибкая опора спины</div>
+              <div class="chair-title">Ergolife V1</div>
+              <div class="chair-tags">Поясница • База для ежедневной работы</div>
               <div class="chair-desc">
-                Спинка повторяет изгибы позвоночника, а механизм раскачивания позволяет менять положение,
-                разгружая нижнюю часть спины. Хороший вариант, если спина быстро устаёт в «ровной» позе.
+                Надёжный вариант, когда нужен комфорт без лишних опций:
+                <ul>
+                  <li>дышащая сетчатая спинка</li>
+                  <li>2D-поддержка поясницы</li>
+                  <li>мягкое объёмное сиденье</li>
+                  <li>регулировка высоты и жёсткости качания с фиксацией</li>
+                  <li>стальной каркас и корпус</li>
+                </ul>
               </div>
-              <div class="cta-row">
-                <a class="link-btn" href="https://samurai.wr-office.ru/#Catalog?model=Samurai-S3" target="_blank" rel="noopener noreferrer">
-                  <span class="icon">🌐</span> Открыть на сайте Samurai
-                </a>
+            </div>
+
+            <!-- Ergolife V3 -->
+            <div class="slide">
+              <div class="chair-image-wrap">
+                <img src="images/Ergolife%20V3.png" alt="Ergolife V3">
+              </div>
+              <div class="chair-title">Ergolife V3</div>
+              <div class="chair-tags">Поясница • Динамическая посадка</div>
+              <div class="chair-desc">
+                Переход к “живому” креслу, которое помогает разгружать поясницу:
+                <ul>
+                  <li>синхромеханизм — меньше статической нагрузки</li>
+                  <li>натяжное сиденье с двухзонной регулировкой жёсткости</li>
+                  <li>настраиваемый подголовник и 2D-поясничная поддержка</li>
+                  <li>ручная настройка жёсткости качания</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Samurai V2 -->
+            <div class="slide">
+              <div class="chair-image-wrap">
+                <img src="images/Samurai%20V2.png" alt="Samurai V2">
+              </div>
+              <div class="chair-title">Samurai V2</div>
+              <div class="chair-tags">Поясница • Точная настройка под себя</div>
+              <div class="chair-desc">
+                Универсальный вариант для длительной работы и активной посадки:
+                <ul>
+                  <li>регулируемая 3D-поясничная поддержка</li>
+                  <li>слайдер глубины сиденья (6 положений)</li>
+                  <li>синхромеханизм — снижает усталость</li>
+                  <li>смещённый центр качания — ноги остаются на полу</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Yoga V1 -->
+            <div class="slide">
+              <div class="chair-image-wrap">
+                <img src="images/Yoga%20V1.png" alt="Yoga V1 (Black Edition)">
+              </div>
+              <div class="chair-title">Yoga V1 (Black Edition)</div>
+              <div class="chair-tags">Поясница • Гибкий позвоночник</div>
+              <div class="chair-desc">
+                Базовая модель линейки Yoga — когда хочется “живую” поддержку спины:
+                <ul>
+                  <li>динамическая спинка с гибким позвоночником</li>
+                  <li>поддержка спины в любом положении</li>
+                  <li>глубокое отклонение (до 80°)</li>
+                  <li>много индивидуальных регулировок под себя</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Yoga V3 -->
+            <div class="slide">
+              <div class="chair-image-wrap">
+                <img src="images/Yoga%20V3.png" alt="Yoga V3 (Triumph)">
+              </div>
+              <div class="chair-title">Yoga V3 (Triumph)</div>
+              <div class="chair-tags">Поясница • Флагман Yoga</div>
+              <div class="chair-desc">
+                Флагман линейки Yoga — максимум комфорта и поддержки для длительных нагрузок:
+                <ul>
+                  <li>гибкий позвоночник ручной сборки</li>
+                  <li>дышащая сетка + боковая поддержка</li>
+                  <li>каркас и пятилучье из литого алюминия</li>
+                  <li>максимальная комплектация и современные регулировки</li>
+                </ul>
               </div>
             </div>
 
@@ -833,39 +853,57 @@
         <!-- Шея и голова -->
         <div class="tab-panel" data-panel="neck">
           <div class="carousel" data-carousel="neck">
+
+            <!-- Ergolife V2 -->
             <div class="slide active">
               <div class="chair-image-wrap">
-                <!-- ЗАГЛУШКА: замените src на официальное фото Samurai S-3 -->
-                <img src="images/samurai_s3_headrest.jpg" alt="Samurai S-3">
+                <img src="images/Ergolife%20V2.png" alt="Ergolife V2">
               </div>
-              <div class="chair-title">Samurai S-3 с подголовником</div>
-              <div class="chair-tags">Шея и голова • Текст-шей</div>
+              <div class="chair-title">Ergolife V2</div>
+              <div class="chair-tags">Шея и голова • Подголовник</div>
               <div class="chair-desc">
-                Высокая спинка и настраиваемый подголовник помогают убрать стойкую привычку тянуть голову вперёд.
-                Подходит, если к вечеру чувствуешь тяжесть в голове, напряжение в шее и плечах.
-              </div>
-              <div class="cta-row">
-                <a class="link-btn" href="https://samurai.wr-office.ru/#Catalog?model=Samurai-S3-Headrest" target="_blank" rel="noopener noreferrer">
-                  <span class="icon">🌐</span> Открыть на сайте Samurai
-                </a>
+                Комфортный шаг вперёд для разгрузки шеи:
+                <ul>
+                  <li>мягкий подголовник — снижает нагрузку на шею</li>
+                  <li>регулируемая поясничная поддержка</li>
+                  <li>объёмное тканевое сиденье</li>
+                  <li>стальной каркас и надёжный газлифт</li>
+                </ul>
               </div>
             </div>
 
+            <!-- Samurai V1 -->
             <div class="slide">
               <div class="chair-image-wrap">
-                <!-- ЗАГЛУШКА: замените src на официальное фото Samurai S-1 -->
-                <img src="images/samurai_s1.jpg" alt="Samurai S-1">
+                <img src="images/Samurai%20V1.png" alt="Samurai V1 (Black Edition)">
               </div>
-              <div class="chair-title">Samurai S-1</div>
-              <div class="chair-tags">Шея • Ровная осанка</div>
+              <div class="chair-title">Samurai V1 (Black Edition)</div>
+              <div class="chair-tags">Шея и голова • Много регулировок</div>
               <div class="chair-desc">
-                Анатомическая форма спинки помогает удерживать голову ближе к линии корпуса,
-                снижая нагрузку на шейные позвонки. Подходит, если слегка сутулишься и быстро устаёт шея.
+                Когда важно “донастроить” посадку под себя:
+                <ul>
+                  <li>3D-подголовник и 4D-подлокотники</li>
+                  <li>анатомическая спинка повторяет форму позвоночника</li>
+                  <li>сетка — комфортно в долгой работе</li>
+                  <li>стальной каркас</li>
+                </ul>
               </div>
-              <div class="cta-row">
-                <a class="link-btn" href="https://samurai.wr-office.ru/#Catalog?model=Samurai-S1" target="_blank" rel="noopener noreferrer">
-                  <span class="icon">🌐</span> Открыть на сайте Samurai
-                </a>
+            </div>
+
+            <!-- Yoga V2 -->
+            <div class="slide">
+              <div class="chair-image-wrap">
+                <img src="images/Yoga%20V2.png" alt="Yoga V2">
+              </div>
+              <div class="chair-title">Yoga V2</div>
+              <div class="chair-tags">Шея и голова • Поддержка в любом положении</div>
+              <div class="chair-desc">
+                Для тех, кто часто откидывается и хочет стабильную поддержку:
+                <ul>
+                  <li>гибкий позвоночник — поддержка спины в любом положении</li>
+                  <li>комфорт при длительной работе и отдыхе</li>
+                  <li>когда шея устает — важно, чтобы верх спины “держался” креслом</li>
+                </ul>
               </div>
             </div>
 
@@ -882,39 +920,57 @@
         <!-- Ноги и стопы -->
         <div class="tab-panel" data-panel="legs">
           <div class="carousel" data-carousel="legs">
+
+            <!-- Ergolife V4 -->
             <div class="slide active">
               <div class="chair-image-wrap">
-                <!-- ЗАГЛУШКА: замените src на официальное фото Samurai L2-11D или KL-2 с акцентом на регулировку сиденья -->
-                <img src="images/samurai_l2_11d.jpg" alt="Samurai L2-11D">
+                <img src="images/Ergolife%20V4.png" alt="Ergolife V4">
               </div>
-              <div class="chair-title">Samurai L2 / KL-серия</div>
-              <div class="chair-tags">Ноги и стопы • Регулировка глубины сиденья</div>
+              <div class="chair-title">Ergolife V4</div>
+              <div class="chair-tags">Ноги и стопы • Глубина сиденья</div>
               <div class="chair-desc">
-                Регулируемая глубина и наклон сиденья помогают убрать давление под бёдрами и добиться,
-                чтобы стопы уверенно стояли на полу или подставке. Подходит, если ноги устают, немеют или «висят» в воздухе.
-              </div>
-              <div class="cta-row">
-                <a class="link-btn" href="https://samurai.wr-office.ru/#Catalog?model=Samurai-L2-or-KL" target="_blank" rel="noopener noreferrer">
-                  <span class="icon">🌐</span> Открыть на сайте Samurai
-                </a>
+                Сильно помогает, если ноги “висят” или затекают:
+                <ul>
+                  <li>регулировка глубины сиденья</li>
+                  <li>раздельное синхронное отклонение спинки и сиденья</li>
+                  <li>фиксация наклона спинки в 4 положениях</li>
+                  <li>мягкое прошитое сиденье, стальной корпус</li>
+                </ul>
               </div>
             </div>
 
+            <!-- Yoga Move -->
             <div class="slide">
               <div class="chair-image-wrap">
-                <!-- ЗАГЛУШКА: замените src на официальное фото Samurai K-2 -->
-                <img src="images/samurai_k2.jpg" alt="Samurai K-2">
+                <img src="images/Yoga%20Move.png" alt="Yoga Move">
               </div>
-              <div class="chair-title">Samurai K-2</div>
-              <div class="chair-tags">Ноги • Динамика и опора</div>
+              <div class="chair-title">Yoga Move</div>
+              <div class="chair-tags">Ноги и стопы • Устойчивая опора при отклонении</div>
               <div class="chair-desc">
-                Механизм качания и устойчивое основание позволяют мягко менять позу без потери опоры под ногами.
-                Подходит, если любишь двигаться в кресле и при этом хочешь сохранить хорошее кровообращение в ногах.
+                Если любишь менять положение и “раскачиваться”, но важно, чтобы ноги не теряли опору:
+                <ul>
+                  <li>механизм Move — увеличенный диапазон отклонения</li>
+                  <li>мультиблок с фиксацией положений</li>
+                  <li>динамическая посадка без жёсткой фиксации</li>
+                  <li>устойчивое положение ног при отклонении</li>
+                </ul>
               </div>
-              <div class="cta-row">
-                <a class="link-btn" href="https://samurai.wr-office.ru/#Catalog?model=Samurai-K2" target="_blank" rel="noopener noreferrer">
-                  <span class="icon">🌐</span> Открыть на сайте Samurai
-                </a>
+            </div>
+
+            <!-- Samurai V3 -->
+            <div class="slide">
+              <div class="chair-image-wrap">
+                <img src="images/Samurai%20V3.png" alt="Samurai V3">
+              </div>
+              <div class="chair-title">Samurai V3</div>
+              <div class="chair-tags">Ноги и стопы • Комфорт дома и надолго</div>
+              <div class="chair-desc">
+                Мягкая посадка + широкая настройка помогает меньше “крутить позы”:
+                <ul>
+                  <li>регулируемая 3D-поясничная поддержка</li>
+                  <li>мягкая посадка, комфорт при длительной работе</li>
+                  <li>5D-подлокотники с поворотом на 360°</li>
+                </ul>
               </div>
             </div>
 
@@ -937,7 +993,7 @@
           </a>
         </div>
         <div class="extra-hint">
-          Менеджер поможет подобрать точную комплектацию Samurai под твой рост, задачи и особенности посадки.
+          Менеджер поможет подобрать точную комплектацию под твой рост, задачи и особенности посадки.
         </div>
       </section>
     </div>
@@ -950,7 +1006,7 @@
       <div class="modal-text">
         Тест смотрит на три зоны: поясница, шея и голова, ноги.
         Каждый ответ добавляет «баллы нагрузки». Чем больше баллов — тем выше риск, что мышцы работают вместо кресла.<br><br>
-        В конце ты получишь понятный разбор и рекомендации по посадке. А по желанию — подборку кресел Samurai, которые могут снять часть нагрузки.
+        В конце ты получишь понятный разбор и рекомендации по посадке. А по желанию — подборку кресел, которые могут снять часть нагрузки.
       </div>
       <div class="modal-actions">
         <button id="infoCloseBtn" class="secondary-btn">Понятно</button>
@@ -961,7 +1017,7 @@
   <!-- Модалка "Показать кресла?" -->
   <div id="chairsAskModal" class="modal-overlay hidden">
     <div class="modal-inner">
-      <div class="modal-title">Показать кресла Samurai под твой результат?</div>
+      <div class="modal-title">Показать кресла под твой результат?</div>
       <div class="modal-text">
         На основе ответов мы можем предложить несколько моделей, которые помогут разгрузить поясницу, шею и ноги.
       </div>
@@ -1017,7 +1073,6 @@
     }
 
     // --- ДАННЫЕ ТЕСТА ---
-
     const questions = [
       {
         id: 1,
@@ -1025,22 +1080,10 @@
         blockKey: "lumbar",
         text: "Как ты обычно сидишь на стуле/кресле?",
         options: [
-          {
-            text: "Сажусь на край сиденья, спина почти не касается спинки",
-            scores: { lumbar: 2 }
-          },
-          {
-            text: "Сижу глубоко, но поясница не упирается в спинку",
-            scores: { lumbar: 1 }
-          },
-          {
-            text: "Сижу глубоко, поясница хорошо касается спинки / валика",
-            scores: { lumbar: 0 }
-          },
-          {
-            text: "Постоянно двигаюсь, то на краю, то глубоко",
-            scores: { lumbar: 1 }
-          }
+          { text: "Сажусь на край сиденья, спина почти не касается спинки", scores: { lumbar: 2 } },
+          { text: "Сижу глубоко, но поясница не упирается в спинку", scores: { lumbar: 1 } },
+          { text: "Сижу глубоко, поясница хорошо касается спинки / валика", scores: { lumbar: 0 } },
+          { text: "Постоянно двигаюсь, то на краю, то глубоко", scores: { lumbar: 1 } }
         ]
       },
       {
@@ -1049,22 +1092,10 @@
         blockKey: "upper",
         text: "Как чаще всего выглядит твоя спина, когда работаешь?",
         options: [
-          {
-            text: "Сильно сутулюсь, плечи вперёд",
-            scores: { lumbar: 1, neck: 1 }
-          },
-          {
-            text: "Чуть-чуть сутулюсь, замечаю это",
-            scores: { lumbar: 0.5, neck: 0.5 }
-          },
-          {
-            text: "Сижу более-менее ровно, но быстро устаю",
-            scores: { lumbar: 1 }
-          },
-          {
-            text: "Спина ровная, кажется, что держу осанку без напряжения",
-            scores: { lumbar: 0 }
-          }
+          { text: "Сильно сутулюсь, плечи вперёд", scores: { lumbar: 1, neck: 1 } },
+          { text: "Чуть-чуть сутулюсь, замечаю это", scores: { lumbar: 0.5, neck: 0.5 } },
+          { text: "Сижу более-менее ровно, но быстро устаю", scores: { lumbar: 1 } },
+          { text: "Спина ровная, кажется, что держу осанку без напряжения", scores: { lumbar: 0 } }
         ]
       },
       {
@@ -1073,22 +1104,10 @@
         blockKey: "neck",
         text: "Где находится твоя голова относительно корпуса, когда смотришь в экран?",
         options: [
-          {
-            text: "Шея вытянута вперёд, как будто тянусь к экрану",
-            scores: { neck: 2 }
-          },
-          {
-            text: "Подбородок часто опускается вниз, голова немного наклонена",
-            scores: { neck: 1 }
-          },
-          {
-            text: "Голова примерно над плечами, без сильного наклона",
-            scores: { neck: 0 }
-          },
-          {
-            text: "Часто наклоняю голову набок / опираюсь щекой на руку",
-            scores: { neck: 1.5 }
-          }
+          { text: "Шея вытянута вперёд, как будто тянусь к экрану", scores: { neck: 2 } },
+          { text: "Подбородок часто опускается вниз, голова немного наклонена", scores: { neck: 1 } },
+          { text: "Голова примерно над плечами, без сильного наклона", scores: { neck: 0 } },
+          { text: "Часто наклоняю голову набок / опираюсь щекой на руку", scores: { neck: 1.5 } }
         ]
       },
       {
@@ -1097,22 +1116,10 @@
         blockKey: "neck",
         text: "Есть ли у тебя поддержка головы или шеи?",
         options: [
-          {
-            text: "Подголовник кресла — время от времени опираюсь",
-            scores: { neck: 0.5 }
-          },
-          {
-            text: "Подушка/валик под шеей",
-            scores: { neck: 0.5 }
-          },
-          {
-            text: "Никакой поддержки, вся нагрузка на мышцы",
-            scores: { neck: 2 }
-          },
-          {
-            text: "Иногда откидываюсь назад и опираюсь, но редко",
-            scores: { neck: 1.5 }
-          }
+          { text: "Подголовник кресла — время от времени опираюсь", scores: { neck: 0.5 } },
+          { text: "Подушка/валик под шеей", scores: { neck: 0.5 } },
+          { text: "Никакой поддержки, вся нагрузка на мышцы", scores: { neck: 2 } },
+          { text: "Иногда откидываюсь назад и опираюсь, но редко", scores: { neck: 1.5 } }
         ]
       },
       {
@@ -1121,22 +1128,10 @@
         blockKey: "neck",
         text: "Что чаще всего чувствуешь в области шеи и плеч к концу дня?",
         options: [
-          {
-            text: "Тяжесть в голове, напряжение в шее",
-            scores: { neck: 2 }
-          },
-          {
-            text: "Болят плечи / трапеции",
-            scores: { neck: 1.5 }
-          },
-          {
-            text: "Усталость, но без яркой боли",
-            scores: { neck: 1 }
-          },
-          {
-            text: "Особых ощущений нет",
-            scores: { neck: 0 }
-          }
+          { text: "Тяжесть в голове, напряжение в шее", scores: { neck: 2 } },
+          { text: "Болят плечи / трапеции", scores: { neck: 1.5 } },
+          { text: "Усталость, но без яркой боли", scores: { neck: 1 } },
+          { text: "Особых ощущений нет", scores: { neck: 0 } }
         ]
       },
       {
@@ -1145,22 +1140,10 @@
         blockKey: "legs",
         text: "Как обычно стоят ноги, когда ты работаешь?",
         options: [
-          {
-            text: "Нога на ногу / подворачиваю ступню под себя",
-            scores: { legs: 2 }
-          },
-          {
-            text: "Ступни не достают до пола / висят",
-            scores: { legs: 2 }
-          },
-          {
-            text: "Ступни стоят на полу, но один носок выше, другая нога под креслом",
-            scores: { legs: 1 }
-          },
-          {
-            text: "Две стопы полностью на полу или подставке, примерно на ширине плеч",
-            scores: { legs: 0 }
-          }
+          { text: "Нога на ногу / подворачиваю ступню под себя", scores: { legs: 2 } },
+          { text: "Ступни не достают до пола / висят", scores: { legs: 2 } },
+          { text: "Ступни стоят на полу, но один носок выше, другая нога под креслом", scores: { legs: 1 } },
+          { text: "Две стопы полностью на полу или подставке, примерно на ширине плеч", scores: { legs: 0 } }
         ]
       },
       {
@@ -1169,26 +1152,11 @@
         blockKey: "general",
         text: "Что с ощущениями в теле после 2–3 часов работы?",
         options: [
-          {
-            text: "Тянущая боль в пояснице",
-            scores: { lumbar: 2, general: 1.5 }
-          },
-          {
-            text: "Усталость в шее и плечах",
-            scores: { neck: 1.5, general: 1 }
-          },
-          {
-            text: "Тяжесть в ногах / онемение",
-            scores: { legs: 1.5, general: 1 }
-          },
-          {
-            text: "Быстро устаю, не понимаю откуда",
-            scores: { general: 2 }
-          },
-          {
-            text: "Чувствую себя нормально",
-            scores: { general: 0 }
-          }
+          { text: "Тянущая боль в пояснице", scores: { lumbar: 2, general: 1.5 } },
+          { text: "Усталость в шее и плечах", scores: { neck: 1.5, general: 1 } },
+          { text: "Тяжесть в ногах / онемение", scores: { legs: 1.5, general: 1 } },
+          { text: "Быстро устаю, не понимаю откуда", scores: { general: 2 } },
+          { text: "Чувствую себя нормально", scores: { general: 0 } }
         ]
       }
     ];
@@ -1268,9 +1236,7 @@
         const btn = document.createElement("button");
         btn.type = "button";
         btn.className = "option-btn";
-        if (answers[currentIndex] === idx) {
-          btn.classList.add("selected");
-        }
+        if (answers[currentIndex] === idx) btn.classList.add("selected");
         btn.innerHTML = `
           <span class="option-radio"></span>
           <span class="option-label">${opt.text}</span>
@@ -1320,29 +1286,18 @@
         if (optIndex == null) return;
         const opt = q.options[optIndex];
         const sc = opt.scores || {};
-        Object.keys(sc).forEach(key => {
-          sum[key] += sc[key];
-        });
+        Object.keys(sc).forEach(key => { sum[key] += sc[key]; });
       });
       return sum;
     }
 
     function getLevelBadge(totalScore) {
       if (totalScore <= 3) {
-        return {
-          className: "result-badge result-badge-low",
-          text: "Общая нагрузка: низкий уровень"
-        };
+        return { className: "result-badge result-badge-low", text: "Общая нагрузка: низкий уровень" };
       } else if (totalScore <= 7) {
-        return {
-          className: "result-badge result-badge-mid",
-          text: "Общая нагрузка: средний уровень"
-        };
+        return { className: "result-badge result-badge-mid", text: "Общая нагрузка: средний уровень" };
       } else {
-        return {
-          className: "result-badge result-badge-high",
-          text: "Общая нагрузка: повышенный риск хронического напряжения"
-        };
+        return { className: "result-badge result-badge-high", text: "Общая нагрузка: повышенный риск хронического напряжения" };
       }
     }
 
@@ -1495,8 +1450,7 @@
       chairsSection.classList.add("hidden");
 
       const sum = calcScores();
-      const totalScore =
-        sum.lumbar + sum.neck + sum.legs + sum.general;
+      const totalScore = sum.lumbar + sum.neck + sum.legs + sum.general;
       const badge = getLevelBadge(totalScore);
       resultBadge.className = badge.className;
       resultBadge.textContent = badge.text;
@@ -1528,13 +1482,11 @@
     function showChairs() {
       closeChairsConfirm();
       chairsSection.classList.remove("hidden");
-      // чуть прокрутим к началу блока с креслами
       chairsSection.scrollIntoView({ behavior: "smooth", block: "start" });
       initAllCarousels();
     }
 
     // --- КАРУСЕЛИ и ВКЛАДКИ ---
-
     const tabButtons = document.querySelectorAll(".tab-btn");
     const tabPanels = document.querySelectorAll(".tab-panel");
 
@@ -1551,11 +1503,7 @@
       });
     });
 
-    const carouselState = {
-      lumbar: 0,
-      neck: 0,
-      legs: 0
-    };
+    const carouselState = { lumbar: 0, neck: 0, legs: 0 };
 
     function initCarousel(key) {
       const carousel = document.querySelector(`.carousel[data-carousel="${key}"]`);
@@ -1602,12 +1550,8 @@
       const dots = document.querySelectorAll(`.dots[data-dots="${key}"] .dot`);
       const activeIndex = carouselState[key];
 
-      slides.forEach((slide, idx) => {
-        slide.classList.toggle("active", idx === activeIndex);
-      });
-      dots.forEach((dot, idx) => {
-        dot.classList.toggle("active", idx === activeIndex);
-      });
+      slides.forEach((slide, idx) => slide.classList.toggle("active", idx === activeIndex));
+      dots.forEach((dot, idx) => dot.classList.toggle("active", idx === activeIndex));
     }
 
     let carouselsInitialized = false;
@@ -1618,7 +1562,6 @@
     }
 
     // --- МОДАЛКИ ---
-
     howBtn.addEventListener("click", () => {
       tactileClick();
       infoModal.classList.remove("hidden");
@@ -1659,7 +1602,6 @@
     });
 
     // --- КНОПКИ НАВИГАЦИИ ---
-
     startTestBtn.addEventListener("click", () => {
       tactileClick();
       startQuiz();
